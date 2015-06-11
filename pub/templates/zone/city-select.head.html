@@ -1,0 +1,12 @@
+{% if status == 'locating' %}
+    定位中...
+{% elif status == 'success' %}
+    定位城市：
+	{% if isCityAvailable %}
+		<a href="javascript:;" class="city" data-action="{{action}}" data-available="true" data-city='{{ city | json_encode }}'>{{city.name}}</a>
+	{% else %}
+		<span class="city city-not-available">{{cityName}}</span>（暂未开通）
+	{% endif %}
+{% elif status == 'fail' %}
+    <span class="re-pos">点击获取当前位置所在城市</span>
+{% endif %}

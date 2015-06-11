@@ -1,0 +1,45 @@
+@import "../../vars";
+
+@-webkit-keyframes rond {
+	0% {
+		-webkit-transform : rotate(0deg);
+		transform : rotate(0deg);
+	}
+	100% {
+		-webkit-transform : rotate(-360deg);
+		transform : rotate(-360deg);
+	}
+}
+.loading{
+	&.default-loading{
+		position: fixed;
+		top: 8rem;
+		width: 100%;
+		z-index: 0;
+	}
+
+	@size: 6rem;
+	.inner{
+		position: relative;
+		margin: 0 auto;
+		width: @size;
+		height: @size;
+		background: rgba(0,0,0,0.5) no-repeat center center;
+		.bg-img("loading_logo.png");
+		border-radius: 1rem;
+	}
+
+	@circle-size: 5.4rem;
+	.circle{
+		position: absolute;
+		top: (@size - @circle-size) / 2;
+		left: (@size - @circle-size) / 2;
+		width: @circle-size;
+		height: @circle-size;
+		background-repeat: no-repeat;
+		.bg-img("loading_line.png");
+		background-size: 100%;
+		-webkit-animation: rond 1.2s infinite linear;
+		animation: rond 1.2s infinite linear;
+	}
+}

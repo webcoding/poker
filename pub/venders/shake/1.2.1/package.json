@@ -1,0 +1,19 @@
+{
+  "name": "shake",
+  "version": "1.2.1",
+  "description": "",
+  "main": "shake.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nunjucks"
+  ],
+  "author": "peichao <380692952@qq.com>",
+  "license": "ISC",
+  "imod":{
+    "notUseStrict":[
+      "shake.js"
+    ]
+  }
+}

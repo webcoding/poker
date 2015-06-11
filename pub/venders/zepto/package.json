@@ -1,0 +1,33 @@
+{
+  "name": "zepto",
+  "version": "1.1.4",
+  "description": "zepto.js",
+  "main": "zepto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:madrobby/zepto.git"
+  },
+  "keywords": [
+    "zepto",
+    "jquery"
+  ],
+  "author": "peichao <380692952@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madrobby/zepto/issues"
+  },
+  "homepage": "https://github.com/madrobby/zepto",
+  "imod": {
+    "notTransform": [
+      "zepto.js",
+      "zepto-detect.js",
+      "zepto-fx.js",
+      "zepto-fx-method.js",
+      "zepto-callbacks.js",
+      "zepto-deferred.js"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+<div class="iqg-pagination clearfix">
+	{% if prevHref %}
+	<span class="prev active" data-action='navUtil.back("{{ prevHref }}")'>上一页</span>
+	{% else %}
+	<span class="prev">上一页</span>
+	{% endif %}
+	{% if nextHref %}
+	<a class="next active" href="{{ nextHref }}">下一页</a>
+	{% else %}
+	<span class="next">下一页</span>
+	{% endif %}
+</div>

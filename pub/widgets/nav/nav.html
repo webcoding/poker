@@ -1,0 +1,39 @@
+{% macro macro_tab(tab) %}
+<div class="tab app-nav-tab {% if tab.active%}active{% endif %} {% if tab.subMenu %}tab-dropdown{% endif %}">
+	<a data-nav-type="replace" data-nav-href="" href="
+	{% if tab.url %}
+		{{tab.url}}
+	{% else %}
+		javascript:;
+	{% endif %}
+	">{{tab.text}}</a>
+</div>
+{% endmacro %}
+
+{% macro macro_tab_manager() %}
+<div class="tabs app-nav-tab-wrapper clearfix"></div>
+{% endmacro %}
+
+{% macro macro_arrow() %}
+<i class="arrow-down"></i>
+{% endmacro %}
+
+{% macro macro_main() %}
+<div id="app-nav">
+	<div class="wrap">
+		<div class="app-nav-main">
+			<div class="btn-left nav-item" data-action="">
+				<a href="javascript:;" class="inner"></a>
+			</div>
+			<h1 class="title nav-item" data-action="">
+				<a href="javascript:;" class="inner single-line"></a>
+			</h1>
+			<!--<div class="btn-right nav-item" data-action="">-->
+				<!--<a href="javascript:;" class="inner"></a>-->
+			<!--</div>-->
+			<a href="javascript:;" class="btn-right nav-item" data-action=""></a>
+		</div>
+		<div class="app-nav-tab-container"></div>
+	</div>
+</div>
+{% endmacro %}

@@ -1,0 +1,26 @@
+<div class="page-container item-comments">
+	<ul class="items">
+	    {% for c in comments %}
+	    <li>
+	        <p>
+		        <span class="mobile">{{c.mobile}}</span>
+		        {% from 'item/_stars.html' import star %}
+		        {{ star(c) }}
+	        </p>
+		    <p class="">
+			    <span class="date">{{c.time | formatTime}}</span>
+		    </p>
+		    <p class="buy">购买了{{ c.item_name }}</p>
+	        <p>{{c.content}}</p>
+		    {% if c.image_thumb %}
+			    <p class="imgs">
+			    {% for img in c.image_thumb %}
+				    <img src="{{ img }}" alt=""/>
+			    {% endfor %}
+			    </p>
+		    {% endif %}
+	    </li>
+	    {% endfor %}
+	</ul>
+	{{ paginationHTML }}
+</div>

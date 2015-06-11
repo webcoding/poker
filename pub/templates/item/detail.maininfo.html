@@ -1,0 +1,23 @@
+{% if item.type != Type.CAMPAIGN_GIFT %}
+	{# 剩余数量为0 #}
+	{% if item.left <= 0 %}
+		<span class="btn-over">抢完了</span>
+	{# 倒计时 #}
+	{% elif isTypeCountdown %}
+		{#
+			还可以购买，字段 ending_seconds 已经废除了；
+			目前时间分为：1.倒计时开始；2.倒计时结束；3.可购买时间结束；4.可兑换时间结束；
+		#}
+		{% if item.countdown_buy_end_time > serverNow %}
+			<a class="btn-buy" href="javascript:;">立即购买</a>
+		{# 倒计时可购买时间到了 #}
+		{% else %}
+			<span class="btn-over">已结束</span>
+		{% endif %}
+	{# 往下拍 #}
+	{% else %}
+		<a class="btn-buy" href="javascript:;">立即购买</a>
+	{% endif %}
+{% endif %}
+<p><strong>{{ (current_price or item.current_price) | formatPrice | rmb }}</strong><del>{{ item.market_price | formatPrice | rmb }}</del></p>
+<h2>{{item.name}}</h2>

@@ -1,0 +1,15 @@
+{% macro style() %}
+<%= mainModuleAndDepsStyle %>
+{% endmacro %}
+
+{% macro script(part) %}
+{% if part == 'main' %}
+<%= mainModule %>
+{% elif part == 'deps' %}
+<%= mainModuleDeps %>
+{% endif %}
+{% endmacro %}
+
+{% macro title() %}
+爱抢购扫码活动
+{% endmacro %}

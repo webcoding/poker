@@ -1,0 +1,43 @@
+{% macro orderStatusText(order, Status, Type) %}
+{% set status = order.status %}
+{% if status == Status.REFUNDED or status == Status.REFUND_REQUESTED or status == Status.REFUNDED_FAILED %}
+	{% if order.refunded_at %}
+		<p class="order-status-text refunded">{{ order.refunded_at | formatTime("YYYY-MM-dd") }} 退款</p>
+	{% endif %}
+{% elif status == Status.WAITING_CONFIRM %}
+	<p class="order-status-text waiting">等待到账</p>
+{% elif status == Status.UNKNOWN %}
+	<p class="order-status-text unknown">等待确认</p>
+{% elif status == Status.PAID %}
+	<p class="order-status-text paid">{{ order.expire_date | formatTime("YYYY-MM-dd hh:mm") }} 过期</p>
+{% elif status == Status.EXPIRED or status == Status.REDEEMED %}
+	{% if order.redeem_time %}
+		<p class="order-status-text used">{{ order.redeem_time | formatTime("YYYY-MM-dd hh:mm") }} 使用</p>
+	{% else %}
+		<p class="order-status-text used">{{ order.expire_date | formatTime("YYYY-MM-dd") }} 使用</p>
+	{% endif %}
+{% endif %}
+{% endmacro %}
+
+{% macro orderStatusBtn(order, Status, Type) %}
+{% set status = order.status %}
+{% if status == Status.REFUNDED or status == Status.REFUND_REQUESTED or status == Status.REFUNDED_FAILED %}
+<span class="order-status-btn refund">已退款</span>
+{% elif status == Status.PAID %}
+	{# 倒计时订单，可以申请退款 #}
+	{# TODO: 稍后做退款功能
+	{% if order.type == Type.COUNTDOWN %}
+	<span class="order-status-btn paid">退款</span>
+	{% endif %}
+	#}
+{% elif status == Status.EXPIRED or status == Status.REDEEMED %}
+	{% if order.is_commented %}
+	<span class="order-status-btn commented">已评论</span>
+	{% else %}
+	{# 还没评论，去评论 #}
+	{# TODO: 稍后做退款功能
+	<span class="order-status-btn not-commented">评论</span>
+	#}
+	{% endif %}
+{% endif %}
+{% endmacro %}

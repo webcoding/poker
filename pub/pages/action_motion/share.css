@@ -1,0 +1,254 @@
+.page-motion {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: 100%;
+  background: -webkit-linear-gradient(#040d1a 0%, #07395f 40%, #3e92c8 70%, #e0f7fb 90%);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#040d1a 0%, #07395f 40%, #3e92c8 70%, #e0f7fb 90%);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#040d1a 0%, #07395f 40%, #3e92c8 70%, #e0f7fb 90%);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#040d1a 0%, #07395f 40%, #3e92c8 70%, #e0f7fb 90%);
+  /* Standard syntax */
+}
+.page-motion .page-motion-wrap {
+  height: 100%;
+  overflow-y: auto;
+}
+.page-motion .close {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  width: 3.3rem;
+  height: 3.3rem;
+}
+.page-motion .share-image {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  position: absolute;
+  top: -100rem;
+  left: -100rem;
+}
+.page-motion button,
+.page-motion .button {
+  display: block;
+  margin: 1rem auto 0;
+  height: 4rem;
+  line-height: 4rem;
+  width: 80%;
+  color: #ffffff;
+  background-color: #ff9933;
+  font-size: 1.8rem;
+  text-align: center;
+  border: 0;
+  border-radius: .5rem;
+}
+.page-motion .clouds {
+  position: fixed;
+  bottom: 0;
+  height: 4rem;
+  width: 100%;
+  background-image: url("<%= cssImageBaseUrl %>night_motion/clouds.png");
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  background-size: 100% 100%;
+}
+.page-motion .life {
+  padding: 0 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.page-motion .life .star {
+  display: inline-block;
+  margin-bottom: 1rem;
+  width: 1.7rem;
+  height: 1.5rem;
+  background-image: url("<%= cssImageBaseUrl %>night_motion/star.png");
+  background-repeat: no-repeat;
+  background-position: -2.9rem 0;
+  background-size: auto 100%;
+}
+.page-motion .life .star-alive {
+  background-position: 0 0;
+}
+.page-motion .item {
+  width: 80%;
+  margin: 1rem auto 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 0.3rem solid #ff9933;
+  border-radius: .5rem;
+  color: #000000;
+}
+.page-motion .item .inner {
+  margin: 0.8rem;
+}
+.page-motion .item img {
+  width: 8rem;
+  float: left;
+  border: 0.1rem solid #ff9933;
+  border-radius: .4rem;
+}
+.page-motion .item .info {
+  padding-left: 9.6rem;
+}
+.page-motion .item h3,
+.page-motion .item p {
+  margin-bottom: .7rem;
+}
+.page-motion .item h3 {
+  font-size: 1.8rem;
+}
+.page-motion .item .mkt-price {
+  color: #666666;
+  text-decoration: line-through;
+}
+.page-motion .item .curr-price {
+  padding-left: 1rem;
+  font-weight: bold;
+  color: #c7223a;
+}
+.page-motion .item button {
+  width: 80%;
+}
+.page-motion .avatar {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-image: url("<%= cssImageBaseUrl %>night_motion/avatar.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.page-motion .avatar-cry {
+  background-position: 0 -11.5rem;
+}
+.page-motion .avatar-blink {
+  background-position: 0 -23rem;
+}
+.page-motion .avatar-smile {
+  background-position: 0 -34.35rem;
+}
+.page-motion .banner {
+  padding-top: 2rem;
+}
+.page-motion .banner img {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 30rem;
+}
+.page-motion .banner p {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+.page-motion .banner .time {
+  padding-top: 1rem;
+  font-size: 1.8rem;
+}
+.page-motion .box {
+  position: relative;
+  margin-top: 1rem;
+}
+.page-motion .box .tip {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  display: inline;
+  padding: .4rem 1rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #ff6633;
+  border-radius: 1rem;
+  color: #ff6633;
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+.page-motion .box .tip:before {
+  position: absolute;
+  left: -0.7rem;
+  top: .7rem;
+  display: inline-block;
+  width: 1rem;
+  height: .8rem;
+  content: '';
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAATCAYAAABhh3Y4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3NpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphZjMwMmZjZS01NDRkLTRmMjItODUwYS1mMjkyZWJmOGU2MDEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTFCMzk2RTFFMTY4MTFFNEE2OEU5NEM2MkY1RUFBQjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTFCMzk2RTBFMTY4MTFFNEE2OEU5NEM2MkY1RUFBQjMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjZkOTIwMWEtYWFhNS00YmQwLWI4MmItYTQzZjQwZjc3Y2JhIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOmFmMzAyZmNlLTU0NGQtNGYyMi04NTBhLWYyOTJlYmY4ZTYwMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtzywuIAAAG2SURBVHjaYvwdb8FAIdAD4otgFiMjA3PfRgZGQVGsCpkosEQXiI/ALQLZpaSD0yJyLRMC4mogvgTE1nBRoK8YzZ3xamQh0aIQIJ4OxCIolhg7MjAHJDEwyChTxTIjqCVmyIKMelYMzCEZDAxyqkQZQoxloUC8AiXIpRQZmCPzGRh1zUkKFkKWdQNxCUI1CwOTTwIQxwHZrCRHNi7L9KHBZgkXkVZiYMloYmCQVSY7+bLgsGghlIYkWRsfBqY4oAfZ2CnKkCxY8s58uEVMTAzMYTkMjB6RDNQA6JaBgs4QblFqAwOjpSsDtQBypi6AZ1Jg3mFKqaOqRciWmQBxP1zQP4WBycqdgdoAZtk0eEbVNgdalshACwCyzACITSExyMrAHFsCDkZaWeYI5zgEMTBIyGCq+veXgeHrZwaGXz8pTo028CDUNGL4t38DA8ODmwz/nz9g+P/iMcP/H18ZGH/9QOhgZWNg4BdhYBSTZmAEFryMiloMDDqmDIy8AgQtYwRWnoVAuo8iJ4OCXVGbgTm7hYFRWBxvMILy1i0Cxv0B4vdA/A2r7P//DAz3rjAw3L+B1xCAAAMAaBNHvS6JOhMAAAAASUVORK5CYII=');
+  background-size: 100% 100%;
+}
+.page-motion .box img {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 30rem;
+}
+.page-motion .userlist {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 30rem;
+  text-align: center;
+  color: #000000;
+}
+.page-motion .userlist .inner {
+  max-height: 12rem;
+  overflow: hidden;
+}
+.page-motion .page-inner {
+  padding-bottom: 6rem;
+}
+.page-motion .page-claimed {
+  padding-top: 6rem;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 160%;
+}
+.page-motion .page-claimed .avatar {
+  margin-bottom: 1rem;
+}
+.page-motion .page-claimed p {
+  margin-bottom: 3rem;
+  padding: 0 2rem;
+}
+.page-motion .page-claimed b {
+  padding: 0 .4rem;
+  font-size: 2.4rem;
+  color: #ff6633;
+}
+.page-motion .page-not-start p,
+.page-motion .page-time-over p,
+.page-motion .page-life-over p,
+.page-motion .page-pool-empty p,
+.page-motion .page-error p {
+  padding: 0 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+.page-motion .page-life-over,
+.page-motion .page-pool-empty,
+.page-motion .page-error {
+  padding-top: 13.15rem;
+}
+.page-motion .page-not-start .avatar,
+.page-motion .page-time-over .avatar {
+  margin-top: 2rem;
+}
+.page-motion .page-normal .life p {
+  margin-bottom: 1rem;
+}
+.page-action-motion-share {
+  color: #ffffff;
+}
+.page-action-motion-share .page-shared {
+  padding-top: 6rem;
+  font-size: 1.5rem;
+}
+.page-action-motion-share .page-shared .avatar {
+  margin-bottom: 1rem;
+}
+.page-action-motion-share .page-shared .tip {
+  padding: 0 2rem;
+  margin-bottom: .5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+}

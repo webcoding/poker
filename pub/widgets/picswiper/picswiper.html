@@ -1,0 +1,11 @@
+<div class="viewport pic-swiper">
+	<p><span>{{currentIndex + 1}}</span>/{{ images | length }}</p>
+	<div class="flipsnap">
+		{% for img in images %}
+		<div class="item">
+			<img src="{{img}}">
+		</div>
+		{% endfor %}
+	</div>
+	<!--<ul class="pagination"></ul>-->
+</div>

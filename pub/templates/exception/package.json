@@ -1,0 +1,36 @@
+{
+	"name": "exception",
+	"version": "1.0.0",
+	"description": "",
+	"main": "error.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"error.content.html"
+	],
+	"pages": {
+		"error.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"error.conf.html": {
+			"mainModule": "pages/exception/error"
+		}
+	},
+
+	"pre_load": [
+		"error.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"error.html"
+		]
+	}
+}

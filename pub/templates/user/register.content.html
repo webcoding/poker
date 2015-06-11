@@ -1,0 +1,39 @@
+<div class="page-container page-reg common-reg {% if shareCode %}is-invite{% endif %}">
+	<div class="reg-form form-wrap">
+		{% if shareCode %}
+		<p class="invite-tip">您受邀注册爱抢购。邀请码{{ shareCode }}。注册立获5元，完成首单您还将额外获得200枚金币。</p>
+		{% endif %}
+		<form autocomplete="on" method="POST" id="form-register">
+			<ul>
+				<li class="first">
+					<input name="mobile" type="number" required placeholder="请输入手机号"/>
+				</li>
+				<li class="rel">
+					{% if useVoiceCode %}
+					<input name="auth_code" type="number" required placeholder="请输入语音验证码"/>
+					<span class="get-verify-code" data-voice="true">获取语音验证<b></b></span>
+					{% else %}
+					<input name="auth_code" type="number" required placeholder="请输入短信验证码"/>
+					<span class="get-verify-code">获取验证码<b></b></span>
+					{% endif %}
+				</li>
+				<li>
+					<input name="password" type="password" required placeholder="请设置密码（至少6位）"/>
+				</li>
+			</ul>
+			<p class="tip clearfix">
+				<label for="user-protocol">我接受<a href="{{ route.R.USER_PROTOCOL | getRoute(route, 'url', route.STATIC_URL_AGREEMENT) }}">用户协议</a></label>
+				<input name="protocol" id="user-protocol" type="checkbox" checked required/>
+			</p>
+			<button class="submit" type="submit">确认注册</button>
+		</form>
+		{% include "user/_third_login.html" %}
+	</div>
+	{#
+	{% if not shareCode %}
+	<div class="log">
+		<span>已有账号？马上<a href="javascript:;" class="btn-log" data-action='navUtil.location("{{ route.R.LOGIN | getRoute(route) }}")'>登录</a></span>
+	</div>
+	{% endif %}
+	#}
+</div>

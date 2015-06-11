@@ -1,0 +1,48 @@
+@import "../../vars";
+
+.header(){
+	position: relative;
+	padding-top: 1.5rem!important;
+
+	.bg-img("action_saoma/topbg.jpg");
+	background-repeat: no-repeat;
+	background-color: #62b450;
+	background-size: 100%;
+	background-position: center 0;
+
+	.title{
+		display: block;
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	.down{
+		position: absolute;
+		left: 1rem;
+		top: 1.3rem;
+		width: 4.3rem;
+		height: 4.5rem;
+		text-indent: -999rem;
+		.bg-img("action_saoma/logo.png");
+		background-position: 0 0;
+		background-size: contain;
+	}
+
+	.scan-tip{
+		margin: 0rem 2rem 0;
+		padding: .5rem .8rem;
+		line-height: 140%;
+
+		background-color: #5bca4a;
+		border: .2rem solid #43b032;
+		border-bottom: 0;
+		border-top-right-radius: 1rem;
+		border-top-left-radius: 1rem;
+
+		color: @font-color-light;
+		font-size: @font-size-big1;
+		text-shadow: 0 0 .4rem #549f43;
+		text-align: center;
+	}
+}

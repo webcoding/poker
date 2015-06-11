@@ -1,0 +1,155 @@
+@import "../../../vars";
+@import "../../c-item/_fn";
+
+.border(){
+	border-bottom: 0.1rem solid #d6d6d6;
+}
+
+@padding: 1rem;
+.order-pay-wrap{
+	.block{
+		.block();
+	}
+
+	.form{
+		padding-bottom: 1rem;
+		background-color: @font-color-light;
+	}
+
+	.summary{
+//		padding: @padding @padding @padding 0;
+//		margin-left: @padding;
+//		padding: @padding;
+//		padding-bottom: 0;
+		//padding-top: @padding;
+		line-height: 140%;
+		//.border();
+
+		h3, .price, .shop{
+			margin-bottom: .5rem;
+		}
+
+		h3{
+			font-size: @font-size-big2;
+		}
+		.price{
+			font-size: @font-size-big2;
+		}
+		.shop{
+			color: @font-color-gray-light;
+			font-size: @font-size-normal;
+		}
+
+		&.open{
+			em{
+				-webkit-transform: rotate(-90deg);
+				-moz-transform: rotate(-90deg);
+				-ms-transform: rotate(-90deg);
+				-o-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+			}
+
+			.detail{
+				display: block;
+			}
+		}
+	}
+	.btn-detail{
+		float: right;
+		font-size: @font-size-normal;
+		color: @font-color-blue-light;
+
+		b{
+			font-weight: normal;
+		}
+
+		em{
+			display: inline-block;
+			font-style: normal;
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			-o-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	}
+	.detail{
+		display: none;
+		line-height: 130%;
+		font-size: @font-size-small;
+		color: @font-color-gray-light;
+
+		.addr,h3,ul,.tips{
+			padding-top: 0.7rem;
+		}
+
+		h3{
+			color: @font-color-dark;
+		}
+
+		li{
+			float: left;
+			width: 50%;
+		}
+	}
+
+	@height: 4.8rem;
+	.pay{
+		line-height: @height;
+		font-size: @font-size-normal;
+		padding: 0 0 @padding @padding;
+
+		.main{
+			padding-right: @padding;
+			.border();
+
+			input{
+				float: left;
+				height: @height;
+			}
+			label{
+				float: left;
+				padding-left: 0.5rem;
+			}
+			.money{
+				float: right;
+			}
+		}
+		.password{
+			display: none;
+			padding-right: @padding;
+			.border();
+
+			input{
+				width: 100%;
+			}
+		}
+		.link-forgot{
+			display: none;
+			.border();
+
+			a{
+				float: right;
+				padding: 0 @padding;
+				color: @font-color-blue-light;
+			}
+		}
+	}
+	.btn-submit{
+		display: block;
+		margin: 1rem auto 0;
+		padding: 0;
+		width: 20rem;
+		height: 4rem;
+		border: 0;
+		background: none;
+		color: @font-color-blue-light;
+		font-size: @font-size-big2;
+	}
+	.time-tip{
+		text-align: center;
+		font-size: @font-size-big2;
+		color: @font-color-gray-light;
+		padding-top: 2rem;
+	}
+}

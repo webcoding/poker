@@ -1,0 +1,47 @@
+<div class="page-container order-pay-wrap">
+    <div class="summary">
+	    <div class="block">
+	        <h3>{{order.name}}</h3>
+		    <div class="block-content">
+		        <p class="price">{{order.price | formatPrice | rmb }}</p>
+		        <p class="shop">{{order.branches[0].name}}<span class="btn-detail"><b>详情</b><em>&gt;</em></span></p>
+		    </div>
+	    </div>
+        <div class="detail">
+	        <div class="block">
+                <p class="addr block-content">地址：{{order.branches[0].address}}</p>
+		    </div>
+	        <div class="block">
+		        {% from "c-item/_item_tip.html" import tip %}
+		        {{ tip(order) }}
+	        </div>
+        </div>
+    </div>
+    <form class="form" id="order-pay-form" method="POST">
+        <div class="pay balance-wrap">
+            <div class="main clearfix">
+	            {% if isCountdown %}
+	            {# 倒计时商品不支持余额支付 #}
+	            <p>不支持<span>余额</span>支付</p>
+	            {% else %}
+                <input type="checkbox" name="account-balance" id="account-balance" {% if order.account_balance == 0 %}disabled{% endif %} />
+                <label for="account-balance">使用余额支付（共{{order.account_balance | formatPrice | rmb }}）</label>
+                <!--<input type="hidden" name="balance-money" value="0"/>-->
+                <p class="money"></p>
+	            {% endif %}
+            </div>
+            <div class="password"><input type="password" name="password" placeholder="请输入账户密码"/></div>
+            <p class="link-forgot clearfix"><a href="{{ route.R.RESET_PASSWORD | getRoute(route) }}">忘记密码？</a></p>
+        </div>
+        <div class="pay alipay-wrap">
+            <div class="main clearfix">
+                <input type="radio" checked name="alipay-web" id="alipay-web"/>
+                <label for="alipay-web">使用支付宝网页支付</label>
+                <!--<input type="hidden" name="alipay-web-money" value="{{order.price}}" />-->
+                <p class="money">{{order.price | formatPrice | rmb }}</p>
+            </div>
+        </div>
+        <button class="btn-submit" type="submit">确认</button>
+        <p class="time-tip">请在<span>{{orderLifeTotalMinutes}}分00秒</span>内支付</p>
+    </form>
+</div>

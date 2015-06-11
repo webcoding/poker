@@ -1,0 +1,230 @@
+.common-reg .form-wrap {
+  background-color: #ffffff;
+}
+.common-reg > div:first-child {
+  padding-top: 3.9rem;
+}
+.common-reg .get-verify-code {
+  color: #0096ff;
+  font-size: 1.5rem;
+}
+.common-reg ul {
+  padding-left: 2rem;
+  border: 0.1rem solid #d6d6d6;
+  border-left: 0;
+  border-right: 0;
+}
+.common-reg li {
+  border-top: 0.1rem solid #d6d6d6;
+}
+.common-reg li.first {
+  border-top: 0;
+}
+.common-reg li.rel {
+  position: relative;
+}
+.common-reg li.rel span {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  padding: 0 2rem;
+  line-height: 3.9rem;
+}
+.common-reg input {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #666666;
+}
+.common-reg p.tip {
+  padding: 1.5rem 1.8rem 1.5rem 0;
+}
+.common-reg p.tip label,
+.common-reg p.tip input {
+  float: right;
+}
+.common-reg p.tip input {
+  margin-top: 0.2rem;
+  width: auto;
+  height: auto;
+}
+.common-reg p.tip label {
+  padding-left: 0.2rem;
+  color: #666666;
+  font-size: 1.5rem;
+}
+.common-reg p.tip label a {
+  padding-left: 0.2rem;
+  color: #0096ff;
+}
+.common-reg p.tip .forgot-password {
+  float: right;
+  color: #0096ff;
+  font-size: 1.5rem;
+}
+.common-reg .submit {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 20rem;
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #0096ff;
+  border: 0;
+  background: none;
+}
+.common-reg .disabled {
+  color: #aaaaaa;
+}
+.common-reg .third-login {
+  margin: 5rem 1rem 0;
+  padding: 0rem 0rem 5rem;
+  border-top: 1px solid #cccccc;
+}
+.common-reg .third-login h2 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: -1.25rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+  text-align: center;
+}
+.common-reg .third-login h2 span {
+  padding: .5rem 1rem;
+  background-color: #ffffff;
+}
+.common-reg .third-login .button {
+  display: block;
+  text-align: center;
+}
+.common-reg .third-login a,
+.common-reg .third-login img {
+  display: inline-block;
+}
+.page-action-sm-reg.common-reg {
+  height: 100%;
+}
+.page-action-sm-reg.common-reg header {
+  position: relative;
+  padding-top: 1.5rem!important;
+  background-image: url("<%= cssImageBaseUrl %>action_saoma/topbg.jpg");
+  background-repeat: no-repeat;
+  background-color: #62b450;
+  background-size: 100%;
+  background-position: center 0;
+}
+.page-action-sm-reg.common-reg header .title {
+  display: block;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.page-action-sm-reg.common-reg header .down {
+  position: absolute;
+  left: 1rem;
+  top: 1.3rem;
+  width: 4.3rem;
+  height: 4.5rem;
+  text-indent: -999rem;
+  background-image: url("<%= cssImageBaseUrl %>action_saoma/logo.png");
+  background-position: 0 0;
+  background-size: contain;
+}
+.page-action-sm-reg.common-reg header .scan-tip {
+  margin: 0rem 2rem 0;
+  padding: .5rem .8rem;
+  line-height: 140%;
+  background-color: #5bca4a;
+  border: .2rem solid #43b032;
+  border-bottom: 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-shadow: 0 0 .4rem #549f43;
+  text-align: center;
+}
+.page-action-sm-reg.common-reg header .title {
+  width: 24rem;
+  height: 10.5rem;
+  background-image: url("<%= cssImageBaseUrl %>action_saoma/top-txt.png");
+}
+.page-action-sm-reg.common-reg .tip a {
+  color: #ff6633 !important;
+}
+.page-action-sm-reg.common-reg .form-wrap {
+  background: none;
+}
+.page-action-sm-reg.common-reg ul {
+  padding-left: 0;
+  border: 0;
+}
+.page-action-sm-reg.common-reg li {
+  padding-left: 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 0;
+  background-color: #ffffff;
+}
+.page-action-sm-reg.common-reg li.first {
+  margin-top: 0;
+}
+.page-action-sm-reg.common-reg .get-verify-code {
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+  line-height: 3.3rem !important;
+  color: #ffffff;
+  background-color: #ff6633;
+}
+.page-action-sm-reg.common-reg .disable {
+  background-color: #eeeeee;
+}
+.page-action-sm-reg.common-reg p.tip {
+  width: 90%;
+  margin: 0 auto;
+  padding: .8rem 0;
+}
+.page-action-sm-reg.common-reg .btn {
+  display: block;
+  padding: 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+  color: #ffffff;
+  background-color: #aaaaaa;
+  border-radius: .5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.page-action-sm-reg.common-reg .submit {
+  margin-bottom: 1rem;
+  background-color: #ff6633;
+}
+.page-action-sm-reg.common-reg .disable {
+  color: #aaaaaa;
+}
+.page-action-sm-reg.common-reg .log {
+  position: absolute;
+  bottom: 6rem;
+  right: 2rem;
+  font-size: 1.5rem;
+}
+.page-action-sm-reg.common-reg .log a {
+  color: #0096ff;
+}
+.page-action-sm-reg.common-reg footer {
+  width: 90%;
+  margin: 2rem auto 0;
+  line-height: 150%;
+  font-size: 1.5rem;
+  color: #ff6633;
+}
+@media screen and (min-width: 470px) {
+  .page-action-sm-reg.common-reg header {
+    background-size: 100% 80%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .page-action-sm-reg.common-reg header .title {
+    width: 19.5rem;
+    height: 8rem;
+  }
+}

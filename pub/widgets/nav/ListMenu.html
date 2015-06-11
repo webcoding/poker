@@ -1,0 +1,10 @@
+<div class="top-nav-list-menu top-nav-{{ menuType }}">
+	<div class="mask"></div>
+	<ul>
+		{% for menu in menus %}
+		<li class="menu-item {% if menu.active %}active {% endif %}">
+			<a href="{{ menu.url }}">{{ menu.name }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>

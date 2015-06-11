@@ -1,0 +1,116 @@
+{% macro macro_located(cbdLng, cbdLat, cbdName, shouldFav, route) %}
+<a href="javascript:;"
+   data-lng="{{cbdLng}}"
+   data-lat="{{cbdLat}}"
+   data-name="{{cbdName}}"
+   class="cbd-point">
+	{{cbdName}}
+</a>
+{#% if shouldFav %}
+<a class="btn-fav"
+   href="{{ route.R.DOWNLOAD | getRoute(route, 'from', route.DOWNLOAD_FROM_FAV, 'lng', cbdLng, 'lat', cbdLat, 'address', cbdName) }}">
+	收藏
+</a>
+{% endif %#}
+{% endmacro %}
+
+{% macro macro_locating() %}
+定位中...
+{% endmacro %}
+
+{% macro macro_clicktogeo() %}
+<span class="click-to-geo">点击获取当前位置</span>
+{% endmacro %}
+
+{% macro macro_main(cityName, usingAddr) %}
+<div class="page-container page-address-wrap">
+	<div class="item-cbd-wrap">
+		{#
+		<div class="block block-single-line iconfont icon-search">
+			<input type="text" placeholder="请输入要切换的地址">
+		</div>
+		#}
+		<div class="block position-block use-addr">
+			<h3 class="use-addr">当前使用位置</h3>
+			<p class="use-addr-content">{{ usingAddr }}</p>
+		</div>
+		<div class="block position-block title-pos">
+			<h3 class="title-pos">当前定位位置</h3>
+			<p class="position">定位中...</p>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro macro_body(branches, cbd, fav, history) %}
+{% if branches | length %}
+<div class="block block-multi-line branches">
+	<h3 class="title-hot">推荐商家</h3>
+	<div class="addrs branches">
+		{{ macro_cbd(branches) }}
+	</div>
+</div>
+{% endif %}
+{% if cbd | length %}
+<div class="block block-multi-line">
+	<h3 class="title-hot">热门商圈[{{cityName}}]</h3>
+	<div class="addrs cbd">
+		{{ macro_cbd(cbd) }}
+	</div>
+</div>
+{% endif %}
+{% if fav | length %}
+<div class="block block-multi-line">
+	<h3 class="title-fav">收藏地址</h3>
+	<div class="list addressbook">
+		{{ macro_addressbook(fav) }}
+	</div>
+</div>
+{% endif %}
+{% if history | length %}
+<div class="block block-multi-line">
+	<h3 class="title-search">搜索历史</h3>
+	<div class="list search-history">
+		{{ macro_addressbook(history) }}
+	</div>
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro macro_addressbook(addressbook) %}
+	{% if addressbook | length %}
+		<div class="inner">
+			<ul class="row">
+			{% for addr in addressbook %}
+				<li class="addr">
+					<a class="cbd-point"
+					   href="javascript:;"
+					   data-lng="{{addr.lng}}"
+					   data-lat="{{addr.lat}}"
+					   data-name="{{addr.name}} {{addr.address}}">
+						{{addr.name}} {{addr.address}}
+					</a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+	{% else %}
+		<span class="inner list-empty">这里啥都没有 ╮(╯▽╰)╭ </span>
+	{% endif %}
+{% endmacro %}
+
+{% macro macro_cbd(cbd) %}
+<div class="inner">
+	{% for addr in cbd %}
+	{% if loop.index0%3 == 0 %}
+	<ul class="row clearfix">
+		{% endif %}
+		<li class="addr"><a class="cbd-point single-line" href="javascript:;" data-lng="{{addr.lng}}" data-lat="{{addr.lat}}"
+		                    data-name="{{addr.name}}">{{addr.name}}</a></li>
+		{% if loop.index0%3 == 2 or loop.last %}
+	</ul>
+	{% endif %}
+	{% endfor %}
+</div>
+{% endmacro %}

@@ -1,0 +1,50 @@
+{
+	"name": "zone",
+	"version": "1.0.0",
+	"description": "",
+	"main": "city-select.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"city-select.content.html",
+		"city-select.head.html",
+		"city-select.list.html",
+
+		"address-select.content.html",
+		"address-select.macro.html"
+	],
+	"pages": {
+		"city-select.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"city-select.conf.html": {
+			"mainModule": "pages/zone/city-select/city-select"
+		},
+
+		"address-select.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"address-select.conf.html": {
+			"mainModule": "pages/zone/address-select/address-select"
+		}
+	},
+
+	"pre_load": [
+		"city-select.conf.html",
+		"address-select.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"city-select.html",
+			"address-select.html"
+		]
+	}
+}

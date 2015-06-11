@@ -1,0 +1,46 @@
+@import "../../../vars";
+
+.star() {
+
+	.stars {
+		float: right;
+		color: @font-color-orange;
+
+		i {
+			margin-right: .02rem;
+			vertical-align: 0rem;
+		}
+	}
+
+	.text-icon {
+		//font-family: base_icon;
+		display: inline-block;
+		vertical-align: middle;
+		font-style: normal;
+
+		&.icon-star {
+			&:after {
+				content: '★';
+			}
+		}
+		&.icon-star-gray {
+			position: relative;
+
+			&:after {
+				color: @font-color-gray-light2;
+				content: '★';
+			}
+		}
+		&.icon-star-partial {
+			position: absolute;
+			left: 0;
+			width: .55rem;
+			overflow: hidden;
+			color: @font-color-orange;
+
+			&:after {
+				content: '★';
+			}
+		}
+	}
+}

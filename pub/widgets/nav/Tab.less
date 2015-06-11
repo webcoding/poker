@@ -1,0 +1,30 @@
+@import "../../vars";
+
+.tab-dropdown{
+	position: relative;
+
+	@dropdown-icon-border-size: .5rem;
+	@dropdown-icon-border-color-active: @font-color-orange;
+	@dropdown-icon-border-color: @font-color-gray-light3;
+	&:after{
+		position: absolute;
+		bottom: .2rem;
+		right: .4rem;
+
+		display: block;
+		content: '';
+		width: 0;
+		height: 0;
+		border-left: @dropdown-icon-border-size solid @font-color-light;
+		border-top: @dropdown-icon-border-size solid @font-color-light;
+		border-right: @dropdown-icon-border-size solid @dropdown-icon-border-color;
+		border-bottom: @dropdown-icon-border-size solid @dropdown-icon-border-color;
+	}
+
+	&.active{
+		&:after{
+			border-right-color: @dropdown-icon-border-color-active;
+			border-bottom-color: @dropdown-icon-border-color-active;
+		}
+	}
+}

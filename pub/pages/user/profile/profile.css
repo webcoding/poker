@@ -1,0 +1,50 @@
+.page-profile {
+  padding-top: 2rem;
+}
+.page-profile .block {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  background-color: #ffffff;
+  font-size: 1.5rem;
+}
+.page-profile a {
+  display: block;
+}
+.page-profile .title {
+  font-size: 1.8rem;
+  padding: .8rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.page-profile .line {
+  padding: .8rem 1rem .8rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.page-profile .line:last-of-type {
+  border-bottom: 0;
+}
+.page-profile .line span {
+  float: right;
+  color: #aaaaaa;
+}
+.page-profile .myprofile {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.page-profile .myprofile .avatar {
+  float: left;
+  width: 6rem;
+  max-height: 6rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+.page-profile .myprofile .mobile {
+  margin-top: .5rem;
+  font-size: 1.8rem;
+}
+.page-profile .myprofile .balance {
+  margin-top: 1.5rem;
+  color: #aaaaaa;
+}
+.page-profile .myprofile .balance span {
+  color: #ff6633;
+}

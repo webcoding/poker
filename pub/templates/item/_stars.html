@@ -1,0 +1,15 @@
+{% macro star(c) %}
+<span class="stars" data-rating="{{ c.rating }}">
+    {% for i in range(0, 5) %}
+    <i class="text-icon
+    {% if c.rating >= i+1 %}icon-star {% else %}icon-star-gray {% endif %}
+    ">
+        {% set diff = i+1 - c.rating %}
+        {% if diff > 0 and diff < 1 %}
+        {% set percent = (1 - diff) * 100 %}
+        <i class="text-icon icon-star-partial" style="width: {{ percent | round }}%"></i>
+        {% endif %}
+    </i>
+    {% endfor %}
+</span>
+{% endmacro %}

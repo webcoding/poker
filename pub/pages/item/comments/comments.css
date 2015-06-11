@@ -1,0 +1,59 @@
+.item-comments .items {
+  background-color: #ffffff;
+}
+.item-comments li {
+  margin-left: 1rem;
+  padding: 1.5rem 1rem 1rem 0;
+  border-bottom: 0.1rem solid #d6d6d6;
+}
+.item-comments .stars {
+  float: right;
+  color: #ff6633;
+}
+.item-comments .stars i {
+  margin-right: .02rem;
+  vertical-align: 0rem;
+}
+.item-comments .text-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
+.item-comments .text-icon.icon-star:after {
+  content: '★';
+}
+.item-comments .text-icon.icon-star-gray {
+  position: relative;
+}
+.item-comments .text-icon.icon-star-gray:after {
+  color: #cccccc;
+  content: '★';
+}
+.item-comments .text-icon.icon-star-partial {
+  position: absolute;
+  left: 0;
+  width: .55rem;
+  overflow: hidden;
+  color: #ff6633;
+}
+.item-comments .text-icon.icon-star-partial:after {
+  content: '★';
+}
+.item-comments .mobile {
+  color: #000000;
+}
+.item-comments .date {
+  color: #aaaaaa;
+}
+.item-comments p {
+  padding-bottom: .2rem;
+  line-height: 150%;
+  font-size: 1.5rem;
+  color: #666666;
+}
+.item-comments p.buy {
+  color: #aaaaaa;
+}
+.item-comments img {
+  height: 10rem;
+}

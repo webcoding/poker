@@ -1,0 +1,26 @@
+{% extends "layout/layout.html" %}
+
+{% import "user/login.conf.html" as conf %}
+
+{% block title %}
+{{ conf.title() }}
+{% endblock %}
+
+{% block moduleStyles %}
+<% if (mainModuleAndDepsStyle){ %>
+<% if (config.env === 'dev'){ %>
+<% var styles = mainModuleAndDepsStyle.split(',') %>
+<% for(var i = 0, len = styles.length; i<len; i++){ %>
+<link rel="stylesheet" href="<%= config.comboBaseUrl %>/<%= styles[i] %>">
+<% } %>
+<% } else { %>
+<link rel="stylesheet" href="<%= config.comboServer %>?v=<%= config.v %>&f={{ conf.style() | trim }}&b=<%= config.comboBaseUrl %>">
+<% } %>
+<% } %>
+{% endblock %}
+
+{% block mainScript %}
+globalInfo.STYLE_LOADED = "{{ conf.style() | trim }}"
+globalInfo.SCRIPT_MAIN = "{{ conf.script('main') | trim }}"
+imod.use("{{ conf.script('main') | trim }}", "{{ conf.script('deps') | trim }}")
+{% endblock %}

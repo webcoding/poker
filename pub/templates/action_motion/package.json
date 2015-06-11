@@ -1,0 +1,47 @@
+{
+  "name": "night motion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.html.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "peichao <380692952@qq.com>",
+  "license": "ISC",
+  "comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+  "none_pages": [
+    "start.content.html",
+    "share.content.html",
+    "start.userlist.html",
+    "start.myprize.html",
+    "start.banner.html",
+    "start.box.html",
+    "start.claimed.html",
+    "start.parts.html",
+    "start.pages.html"
+  ],
+  "pages": {
+    "start.html": {
+      "mainModule": "<%= conf.mainModule %>"
+    },
+    "start.conf.html": {
+      "mainModule": "pages/action_motion/start"
+    },
+    "share.html": {
+      "mainModule": "<%= conf.mainModule %>"
+    },
+    "share.conf.html": {
+      "mainModule": "pages/action_motion/share"
+    }
+  },
+  "pre_load": [
+    "start.conf.html",
+    "share.conf.html"
+  ],
+  "imod": {
+    "templateNotPrecompile": [
+      "start.html",
+      "share.html"
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+@import "../../../vars";
+
+@item-padding: 1rem;
+@img-size: 9.5rem;
+@price-width: 3rem;
+
+.order-wrap{
+	.title{
+		padding: 0.5rem 0 0.5rem 1rem;
+		background-color: @font-color-gray-light3;
+		color: @font-color-gray;
+		font-size: @font-size-normal;
+		font-weight: bold;
+	}
+	.orders{
+		background-color: @font-color-light;
+
+		.order{
+			position: relative;
+
+			a{
+				display: block;
+				padding: @item-padding 0 0 @item-padding;
+			}
+
+			.img{
+				float: left;
+				width: @img-size;
+				height: @img-size;
+				border: 1px solid @font-color-gray-light3;
+			}
+
+			.content{
+				//height: @img-size;
+				width: 100%;
+				padding-bottom: @item-padding;
+				border-bottom: 0.1rem solid @font-color-gray-light3;
+			}
+
+			.inner{
+				margin-left: 1rem + @img-size;
+				//margin-right: @price-width + @item-padding;
+				padding-bottom: .5rem;
+			}
+
+			h3{
+				width: 100%;
+//				margin-top: 1rem;
+				//margin-bottom: 1rem;
+				font-size: @font-size-normal;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+
+			.expire, .used{
+				//font-size: @font-size-normal;
+			}
+
+//			.shop{
+//				position: absolute;
+//				bottom: @item-padding;
+//				font-size: @font-size-normal;
+//				color: @font-color-gray-light;
+//			}
+
+//			.price{
+//				position: absolute;
+//				top: @item-padding;
+//				right: @item-padding;
+//				color: @font-color-gray-light;
+//				font-size: @font-size-normal;
+//			}
+		}
+
+		.shop,
+		.price,
+		.order-status-text{
+			padding-top: .5rem;
+			font-size: @font-size-normal;
+			color: @font-color-gray-light;
+		}
+		.order-status-btn{
+			display: inline-block;
+			margin-top: .5rem;
+			padding: .5rem .8rem;
+			background-color: @font-color-gray-light;
+			color: @font-color-light;
+			font-size: @font-size-normal;
+			border-radius: .3rem;
+
+			&.not-commented,
+			&.paid{
+				background-color: @font-color-orange;
+			}
+		}
+	}
+
+	.empty{
+		line-height: 6rem;
+		color: @font-color-gray;
+		text-align: center;
+		font-size: @font-size-normal;
+	}
+}

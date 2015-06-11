@@ -1,0 +1,79 @@
+<div class="c-item-detail">
+	{# 订单详情的接口还没有改过来 #}
+	{% if not item.rating | is(undefined) %}
+	{% set showStar = item.comments_count | number > item.comments_limit | number %}
+	{% set showComment = item.comments_count | number > 0 %}
+
+	{% if showStar or showComment %}
+	<div class="block">
+		<a class="block-content clearfix" href="{{ route.R.ITEM_COMMENTS | getRoute(route, 'item_id', item.id) }}">
+			{% if showStar %}
+			{% from 'item/_stars.html' import star %}
+			{{ star(item) }}
+			{% else %}
+			<span class="stars star-less">评论少于{{ item.comments_limit }}条</span>
+			{% endif %}
+			{% if showComment %}
+			<span class="btn-comment">查看评论({{ item.comments_count }})</span>
+			{% endif %}
+		</a>
+	</div>
+	{% endif %}
+	{% endif %}
+
+    {% if not done %}
+    <div class="description block">
+	    <p class="block-content">{{item.description | nl2br}}</p>
+		<a class="btn-more" href="{{ route.R.ITEM_DESCRIPTION | getRoute(route, 'item_id', itemId, 'url', item.more_info) }}">查看更多描述信息</a>
+    </div>
+	<div class="hint block">
+	{% from "c-item/_item_tip.html" import tip %}
+	{{ tip(item) }}
+	</div>
+	{% if item.ad %}
+    <div class="preferential block">
+        <div class="inner">
+            <h3>优惠信息</h3>
+            <p>
+	            <span class="block-content">{{item.ad.content or item.ad.title}}</span>
+	            {% if item.ad.url %}
+	            <!--<span class="btn-more">-->
+		            <a class="btn-more" href="{{ route.R.ITEM_PREFERENTIAL | getRoute(route, 'item_id', itemId, 'url', item.ad.url) }}">查看优惠详情</a>
+	            <!--</span>-->
+	            {% endif %}
+            </p>
+        </div>
+    </div>
+	{% endif %}
+    {% endif %}
+    <div class="shop block">
+	    {% set shop = item.branches[0] %}
+        <h3>{{shop.name}}</h3>
+	    <div class="block-content">
+	        <p class="tel"><a href="tel:{{shop.tel}}">电话：<span>{{shop.tel}}</span></a></p>
+	        <p class="addr"><a href="{{ shop | geoLink }}">地址：<span>{{shop.address}}</span></a></p>
+		</div>
+        <!--<span class="btn-more">-->
+	        <a class="btn-more" href="{{ route.R.ITEM_SHOPS | getRoute(route, 'item_id', itemId) }}">所有门店</a>
+        <!--</span>-->
+    </div>
+	{# 理论上不需要下面的评论模块了，评论已经集成到星级了，但订单详情的接口还没有改过来 #}
+	{% if item.rating | is(undefined) %}
+    <div class="comments block">
+        <h3>用户评论</h3>
+        {% if item.comments[0] %}
+	    <div class="block-content">
+	        <p>{{item.comments[0].mobile}}</p>
+	        <p>{{item.comments[0].content}}</p>
+		</div>
+        <!--<span class="btn-more">-->
+	        <a class="btn-more" href="{{ route.R.ITEM_COMMENTS | getRoute(route, 'item_id', itemId) }}">更多评论</a>
+	    <!--</span>-->
+        {% else %}
+	    <div class="block-content">
+            <p>暂无评论</p>
+		</div>
+        {% endif %}
+    </div>
+	{% endif %}
+</div>

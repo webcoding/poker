@@ -1,0 +1,110 @@
+.items-wrap-countdown {
+  padding-bottom: 1rem;
+}
+.items-wrap-countdown .curr-pos {
+  display: block;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+  padding-left: 1rem;
+  line-height: 200%;
+  background-color: #eeeeee;
+}
+.items-wrap-countdown .empty {
+  padding-top: 2rem;
+  line-height: 3rem;
+  color: #aaaaaa;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.items-wrap-countdown .item {
+  margin: 0.5rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.items-wrap-countdown .top {
+  position: relative;
+  min-height: 8rem;
+}
+.items-wrap-countdown .top img {
+  max-width: 100%;
+}
+.items-wrap-countdown .top .down-tip,
+.items-wrap-countdown .top .price-floor {
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+}
+.items-wrap-countdown .top .down-tip {
+  left: 0;
+}
+.items-wrap-countdown .top .price-floor {
+  right: 0;
+}
+.items-wrap-countdown .info {
+  padding: 1rem 0.5rem .5rem;
+}
+.items-wrap-countdown .left,
+.items-wrap-countdown .right {
+  float: left;
+}
+.items-wrap-countdown .left {
+  width: 70%;
+}
+.items-wrap-countdown .left .name {
+  display: block;
+  font-size: 1.5rem;
+}
+.items-wrap-countdown .left .shop,
+.items-wrap-countdown .left .addr {
+  display: block;
+  margin-top: .5rem;
+  width: 100%;
+  color: #aaaaaa;
+}
+.items-wrap-countdown .left .shop {
+  line-height: 140%;
+  font-size: 1.2rem;
+}
+.items-wrap-countdown .left .addr {
+  font-size: 1.2rem;
+}
+.items-wrap-countdown .right {
+  width: 30%;
+}
+.items-wrap-countdown .right .real-time {
+  color: #aaaaaa;
+}
+.items-wrap-countdown .right .price-start {
+  color: #ff6633;
+  font-size: 1.6rem;
+}
+.items-wrap-countdown .right .price-floor {
+  float: right;
+  color: #666666;
+  font-size: 1.2rem;
+}
+.items-wrap-countdown .right .range {
+  margin-top: -1rem;
+  width: 100%;
+}
+.items-wrap-countdown .right .end {
+  float: right;
+  margin-top: -1rem;
+  font-size: 1.2rem;
+  color: #aaaaaa;
+}
+.items-wrap-countdown .tip-when {
+  display: none;
+}
+.items-wrap-countdown .dragging .tip-when {
+  display: inline;
+}
+.items-wrap-countdown .dragging .tip-end {
+  display: none;
+}

@@ -1,0 +1,25 @@
+<div class="page-container order-detail">
+	{% import "order/_order_status.html" as orderStatus %}
+	<div class="main-info">
+		<h2 class="title">{{order.name}}</h2>
+		{% if order.status == Status.PAID %}
+		<h2 class="code">验证码： {{ order.redeem_number }}</h2>
+		{% else %}
+		<span class="branch">{{ order.branches[0].address }}</span>
+		{% endif %}
+	</div>
+
+    <div class="block">
+	    {% if order.status == Status.PAID %}
+	    <div class="block-content">
+	        <p class="paragraph">过期时间：{{ order.expire_date | formatTime("YYYY-MM-dd hh:mm") }}</p>
+	        <p class="paragraph">领取商品时请展示此页，截图无效</p>
+	    </div>
+        {% else %}
+	    <div class="block-content">
+            <p class="paragraph">谢谢购买</p>
+		</div>
+        {% endif %}
+    </div>
+	{% include "c-item/detail.html" %}
+</div>

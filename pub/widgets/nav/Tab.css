@@ -1,0 +1,20 @@
+.tab-dropdown {
+  position: relative;
+}
+.tab-dropdown:after {
+  position: absolute;
+  bottom: .2rem;
+  right: .4rem;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 0.5rem solid #ffffff;
+  border-top: 0.5rem solid #ffffff;
+  border-right: 0.5rem solid #eeeeee;
+  border-bottom: 0.5rem solid #eeeeee;
+}
+.tab-dropdown.active:after {
+  border-right-color: #ff6633;
+  border-bottom-color: #ff6633;
+}

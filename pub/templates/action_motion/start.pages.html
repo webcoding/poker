@@ -1,0 +1,86 @@
+{% from "action_motion/start.parts.html" import banner, box, userlist, life, item, avatar %}
+
+{% macro page_claimed(taken_order) %}
+<div class="page-claimed" data-order-id="{{ taken_order.id }}">
+	{{ avatar(3) }}
+	<p>{{ taken_order.name }}领取成功!
+		<br>
+		奖品已经发送到您的订单中啦~
+	</p>
+	<p>火速像小伙伴们炫耀一下吧~
+		<br>
+		分享还能攒人品，增加<b>5</b>倍概率哦~
+	</p>
+	<a href="javascript:;" class="button btn-share">立即分享</a>
+</div>
+{% endmacro %}
+
+{% macro page_have_locked(locked_item, left_times, start_time, end_time, can_motion, show_life_text) %}
+<div class="page-locked">
+	{{ banner(start_time, end_time, can_motion) }}
+	{{ box(can_motion) }}
+	{{ life(left_times, show_life_text) }}
+	{{ item(locked_item.item, locked_item.pool_id) }}
+	<a href="javascript:;" class="button btn-claim">领取</a>
+</div>
+{% endmacro %}
+
+{% macro page_not_start(start_time, end_time) %}
+<div class="page-not-start">
+	{{ banner(start_time, end_time, can_motion) }}
+	{{ avatar(4) }}
+	<p>亲，活动还没开始呢~</p>
+	<p>{{ start_time | formatTime('hh:mm') }}再来摇一摇吧!</p>
+</div>
+{% endmacro %}
+
+{% macro page_time_over(start_time, end_time) %}
+<div class="page-time-over">
+	{{ banner(start_time, end_time, can_motion) }}
+	{{ avatar(2) }}
+	<p>哎呦~今天的睡前摇已经结束啦~</p>
+	<p>明天早点来吧~</p>
+</div>
+{% endmacro %}
+
+{% macro page_life_over() %}
+<div class="page-life-over">
+	{{ avatar(2) }}
+	<p>哎呦~今天机会已经全部用完啦~</p>
+	<p>记得明天再来吧~</p>
+</div>
+{% endmacro %}
+
+{% macro page_pool_empty() %}
+<div class="page-pool-empty">
+	{{ avatar(2) }}
+	<p>哎呦~今天的奖品已经全部抢完啦~</p>
+	<p>明天早点来吧~</p>
+</div>
+{% endmacro %}
+
+{% macro page_normal(users, left_times, start_time, end_time, can_motion, show_life_text) %}
+<div class="page-normal">
+	{{ banner(start_time, end_time) }}
+	{{ box(can_motion) }}
+	{{ life(left_times, show_life_text) }}
+	{{ userlist(users) }}
+</div>
+{% endmacro %}
+
+{% macro page_shared(_item, route) %}
+<div class="page-shared">
+	{{ avatar(1) }}
+	<p class="tip">哇~你的朋友刚刚摇到了 {{ _item.name }}！</p>
+	<p class="tip">你还不赶快去摇一摇吗~</p>
+	{{ item(_item) }}
+	<a class="button" href="{{ route.R.A_MOTION_START | getRoute(route) }}">我也要玩</a>
+</div>
+{% endmacro %}
+
+{% macro page_error(msg) %}
+<div class="page-error">
+	{{ avatar(2) }}
+	<p>{{ msg }}</p>
+</div>
+{% endmacro %}

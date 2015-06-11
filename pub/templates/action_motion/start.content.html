@@ -1,0 +1,46 @@
+{% import "action_motion/start.pages.html" as pages %}
+
+{% if not onlySubPage %}
+<div class="page-container page-motion page-action-motion-start">
+	<div class="page-motion-wrap">
+		<!--<img src="night_motion/shareimg.png" class="share-image">-->
+		<img src="night_motion/close.png" alt="" class="close"/>
+		<div class="page-inner">
+{% endif %}
+
+		{# 已经领取过商品了，直接展示出来 #}
+		{# 这个页面需要放到结果页(share)
+		{% if status == Status.CLAIMED %}
+			{{ pages.page_claimed(taken_order) }}
+		#}
+
+
+		{# 有错误 #}
+		{% if status == Status.ERROR %}
+			{{ pages.page_error(error_msg) }}
+		{# 有摇到但尚未领取的商品，直接展示出来 #}
+		{% elif status == Status.LOCKED %}
+			{{ pages.page_have_locked(locked_item, left_times, start_time, end_time, can_motion, show_life_text) }}
+		{# 摇一摇尚未开始 #}
+		{% elif status == Status.NOT_START %}
+			{{ pages.page_not_start(start_time, end_time) }}
+		{# 摇一摇已经结束 #}
+		{% elif status == Status.TIME_OVER %}
+			{{ pages.page_time_over(start_time, end_time) }}
+		{# 三次机会已经用完 #}
+		{% elif status == Status.LIFE_OVER %}
+			{{ pages.page_life_over() }}
+		{# 没摇到，可能是奖品池空了 #}
+		{% elif status == Status.ITEM_OVER %}
+			{{ pages.page_pool_empty() }}
+		{# 正常（比如第一次）进入 #}
+		{% elif status == Status.NORMAL %}
+			{{ pages.page_normal(list, left_times, start_time, end_time, can_motion, show_life_text) }}
+		{% endif %}
+
+{% if not onlySubPage %}
+		</div>
+	</div>
+	<div class="clouds"></div>
+</div>
+{% endif %}

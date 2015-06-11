@@ -1,0 +1,32 @@
+<div class="page-container item-detail-wrap">
+    <div class="imgs viewport">
+        <ul class="clearfix flipsnap {% if isTypeCountdown %}img-countdown {% else %}img-bargain {% endif %}"
+            {#style="width: {{winWidth * item.images | length}}px;"#}
+		    >
+            {% for img in item.images %}
+	        {% if loop.index0 < 2 %}
+	        <li class="item {% if loop.first %}first{% endif %}" data-index="{{ loop.index0 }}" {#style="width: {{winWidth}}px;"#}>
+		        <img src="{{img}}"/>
+	        </li>
+	        {% endif %}
+            {% endfor %}
+        </ul>
+	    {#<p>点击图片查看相册</p>#}
+    </div>
+	<div class="main-info-wrap">
+	    <div class="main-info">
+		    {% include "item/detail.maininfo.html" %}
+	    </div>
+	</div>
+    <div class="block">
+	    <p class="buy block-content">
+		    {% if item.left == 0 %}
+		    {{item.like}}个人抢购，已经抢完了！明天早点来
+		    {% else %}
+		    {{item.like}}人正在抢购，只剩{{item.left}}个啦！
+		    {% endif %}
+	    </p>
+    </div>
+    {# itemDetailHtml #}
+	{% include "c-item/detail.html" %}
+</div>

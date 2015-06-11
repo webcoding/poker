@@ -1,0 +1,12 @@
+{% macro tip(item) %}
+	<h3>特别提示</h3>
+	<div class="block-content">
+		<ul class="clearfix">
+			{#<li>{% if item.refund_type == 0 %}不{% endif %}支持退款</li>#}
+			<li>{% if item.need_book == 0 %}无{% endif %}需预约</li>
+			<li>有效期{{item.redeem_period}}天</li>
+			<li>{% if item.allow_take_out == 0 %}限堂吃{# 如：/item/511995 #}{% elif item.allow_take_out == 1 %}{#仅限外卖 -- 此时不显示，如：/item/513432 #}{% else %}{#无限制 -- 不显示，如：/item/514676 #}{% endif %}</li>
+		</ul>
+		<p class="tips">{{item.tips | nl2br}}</p>
+	</div>
+{% endmacro %}

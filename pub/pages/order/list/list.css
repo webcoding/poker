@@ -1,0 +1,65 @@
+.order-wrap .title {
+  padding: 0.5rem 0 0.5rem 1rem;
+  background-color: #eeeeee;
+  color: #666666;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.order-wrap .orders {
+  background-color: #ffffff;
+}
+.order-wrap .orders .order {
+  position: relative;
+}
+.order-wrap .orders .order a {
+  display: block;
+  padding: 1rem 0 0 1rem;
+}
+.order-wrap .orders .order .img {
+  float: left;
+  width: 9.5rem;
+  height: 9.5rem;
+  border: 1px solid #eeeeee;
+}
+.order-wrap .orders .order .content {
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #eeeeee;
+}
+.order-wrap .orders .order .inner {
+  margin-left: 10.5rem;
+  padding-bottom: .5rem;
+}
+.order-wrap .orders .order h3 {
+  width: 100%;
+  font-size: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.order-wrap .orders .shop,
+.order-wrap .orders .price,
+.order-wrap .orders .order-status-text {
+  padding-top: .5rem;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+}
+.order-wrap .orders .order-status-btn {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .5rem .8rem;
+  background-color: #aaaaaa;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: .3rem;
+}
+.order-wrap .orders .order-status-btn.not-commented,
+.order-wrap .orders .order-status-btn.paid {
+  background-color: #ff6633;
+}
+.order-wrap .empty {
+  line-height: 6rem;
+  color: #666666;
+  text-align: center;
+  font-size: 1.5rem;
+}

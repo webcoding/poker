@@ -1,0 +1,119 @@
+#app-nav {
+  display: none;
+  height: 4.4rem;
+  font-weight: normal;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 45;
+}
+#app-nav.have-tab {
+  height: 7.92rem;
+}
+#app-nav .nav-item {
+  display: none;
+}
+#app-nav .nav-item.show {
+  display: block;
+}
+#app-nav a {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+#app-nav .inner {
+  display: inline-block;
+}
+#app-nav .btn-left,
+#app-nav .btn-right {
+  height: 4.4rem;
+  font-size: 1.5rem;
+}
+#app-nav .btn-left {
+  text-align: left;
+}
+#app-nav .btn-right {
+  text-align: right;
+}
+#app-nav .btn-left.show {
+  padding-left: .5rem;
+  padding-right: 1rem;
+}
+#app-nav .btn-right.show {
+  padding-right: .5rem;
+  padding-left: 1rem;
+}
+#app-nav .title {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.8rem;
+  -webkit-box-flex: 1;
+  width: 100%;
+}
+#app-nav .title .inner {
+  max-width: 80%;
+}
+#app-nav .nav-item-arrow:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-top: 0.7rem solid #ffffff;
+  border-left: .45rem solid transparent;
+  border-right: .45rem solid transparent;
+  border-bottom: 0;
+  margin-left: .3rem;
+}
+.app-nav-main {
+  display: -webkit-box;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  background-color: #ff7d41;
+}
+.app-nav-main .tabs {
+  background-color: #ff7d41;
+}
+.app-nav-main .tab {
+  float: left;
+  color: rgba(255, 255, 255, 0.7);
+  height: 4.1rem;
+  line-height: 4.1rem;
+  border-bottom: 0.3rem solid #ff7d41;
+}
+.app-nav-main .tab.active {
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.app-nav-main .tab a {
+  display: inline-block;
+  padding: 0 .8rem;
+}
+.app-nav-tab-container .tabs {
+  background-color: #ffffff;
+  color: #aaaaaa;
+  font-size: 1.5rem;
+  border-bottom: 0.1rem solid #cccccc;
+  display: -webkit-box;
+  display: box;
+}
+.app-nav-tab-container .tab {
+  height: 3.22rem;
+  line-height: 3.22rem;
+  border-bottom: 0.3rem solid #ffffff;
+  display: block;
+  -webkit-box-flex: 1;
+  -mz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+}
+.app-nav-tab-container .tab.active {
+  font-weight: bold;
+  color: #ff7d41;
+  border-bottom-color: #ff7d41;
+}
+.app-nav-tab-container a {
+  display: block;
+  padding: 0 .8rem;
+}

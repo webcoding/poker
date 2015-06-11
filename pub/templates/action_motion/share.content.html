@@ -1,0 +1,15 @@
+{% import "action_motion/start.pages.html" as pages %}
+<div class="page-container page-motion page-action-motion-share">
+	<div class="page-motion-wrap">
+		<!--<img src="night_motion/shareimg.png" class="share-image">-->
+		<img src="night_motion/close.png" alt="" class="close"/>
+		<div class="page-inner">
+			{% if mine %}
+				{{ pages.page_claimed(item) }}
+			{% else %}
+				{{ pages.page_shared(item, route) }}
+			{% endif %}
+		</div>
+	</div>
+	<div class="clouds"></div>
+</div>

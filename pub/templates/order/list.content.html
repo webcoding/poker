@@ -1,0 +1,76 @@
+{% macro order(orders, type) %}
+	{% if orders | length %}
+	{% set isCountdown = type == 'countdown' %}
+	{% set isAll = type == 'all' %}
+	{% if not isAll %}
+	<p class="title">
+		{% if isCountdown %}
+		倒计时
+		{% else %}
+		往下拍
+		{% endif %}
+	</p>
+	{% endif %}
+	<ul class="orders
+	{% if isCountdown %}
+	countdown-orders
+	{% elif isAll %}
+	all-orders
+	{% else %}
+	bargain-orders
+	{% endif %}
+	">
+		{% import "order/_order_status.html" as orderStatus %}
+		{% for order in orders %}
+		<li class="order">
+			<a href="{{ route.R.ORDER_DETAIL | getRoute(route, 'type', orderType, 'order_id', order.id) }}">
+				<img src="{{order.images[0]}}" class="img"/>
+				<div class="content">
+					<div class="inner clearfix">
+						<h3>{{order.name}}</h3>
+						{% if order.type == Type.NIGHT_MOTION %}
+						<p class="price">睡前摇</p>
+						{% else %}
+						<p class="price">{{ order.price | formatPrice | rmb }}</p>
+						{% endif %}
+						<div class="time">
+							{{ orderStatus.orderStatusText(order, Status, Type) }}
+						</div>
+						{#
+						{% if isRedeem %}
+						<p class="expire">过期时间：{{ order.expire_date | formatTime("MM-dd hh:mm") }}</p>
+						{% else %}
+						<p class="used">{{ (order.redeem_time or order.expire_date) | formatTime("MM-dd hh:mm") }} 使用</p>
+						{% endif %}
+						#}
+						<p class="shop">{{ order.branches[0].name }}</p>
+						{{ orderStatus.orderStatusBtn(order, Status, Type) }}
+					</div>
+				</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+{% endmacro %}
+
+{% macro empty() %}
+<p class="empty">此处没有订单</p>
+{% endmacro %}
+
+<div class="page-container order-wrap">
+	{% if hasCategory %}
+		{% if data.bargain_orders | length == 0 and data.countdown_orders | length == 0 %}
+			{{ empty() }}
+		{% else %}
+			{{ order(data.bargain_orders, "bargain") }}
+			{{ order(data.countdown_orders, "countdown") }}
+		{% endif %}
+	{% else %}
+		{% if data | length == 0 %}
+			{{ empty() }}
+		{% else %}
+			{{ order(data, "all") }}
+		{% endif %}
+	{% endif %}
+</div>

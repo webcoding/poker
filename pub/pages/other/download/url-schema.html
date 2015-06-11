@@ -1,0 +1,40 @@
+{#
+// 首页、往下拍列表页
+iqianggou://
+
+// 倒计时列表页
+iqianggou://list/item?type=countdown
+
+// 商品详情页
+iqianggou://item?id=${id}
+
+// 商品评论页
+iqianggou://item/comments?id=${id}
+
+// 商品更多详情
+iqianggou://item/description?id=${id}
+
+// 我的
+iqianggou://profile
+#}
+{% if isFav %}
+
+{# 【收藏】 #}
+iqianggou://fav?lng={{lng}}&lat={{lat}}&address={{address}}
+
+{% elif isCoin %}
+
+{# 【赚金币】 #}
+iqianggou://coin
+
+{% elif isPreferential %}
+
+{# 【优惠点】 #}
+iqianggou://preferential?item_id={{itemId}}
+
+{% else %}
+
+{# 【默认】 #}
+iqianggou://home
+
+{% endif %}

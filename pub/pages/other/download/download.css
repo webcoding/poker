@@ -1,0 +1,60 @@
+.down-wrap {
+  font-size: 1.5rem;
+  background-color: #ffffff;
+}
+.down-wrap p {
+  padding: 8rem 2rem 8rem;
+  color: #aaaaaa;
+  line-height: 160%;
+}
+.down-wrap .buttons {
+  padding: 0 4rem 2rem;
+  color: #0096ff;
+}
+.down-wrap .download-btn {
+  display: block;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.down-wrap .wechat-ios {
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 4.4rem;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.down-wrap .wechat-ios .inner {
+  margin: 0 .5rem;
+  padding: .5rem;
+  border-bottom-right-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+  background-color: #ffffff;
+}
+.down-wrap .wechat-ios li {
+  list-style: inherit;
+  margin-top: 1rem;
+}
+.down-wrap .wechat-ios i {
+  display: inline-block;
+  text-indent: -999rem;
+  background-image: url("<%= cssImageBaseUrl %>weixin/wx_tips.png");
+  background-repeat: no-repeat;
+  background-size: 3.05rem auto;
+  line-height: 30rem;
+  height: 1.4rem;
+  width: 2.4rem;
+  margin: 0 .5rem;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.down-wrap .wechat-ios .wxtips-top {
+  position: fixed;
+  top: .5rem;
+  right: 1.5rem;
+  width: 1.55rem;
+  height: 2.8rem;
+  background-position: 0 -8.8rem;
+}

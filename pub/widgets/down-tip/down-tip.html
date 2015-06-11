@@ -1,0 +1,18 @@
+<div class="">
+	<i class="close">x</i>
+	{#
+	<a class="btn-download" href="{{ route.R.DOWNLOAD | getRoute(route) }}">
+	#}
+	<a class="btn-download" data-type="{{ tipType }}" href="{{ route.R.DOWNLOAD | getRoute(route, 'from', route.DOWNLOAD_FROM_BOTTOM_TIP, 'type', tipType) }}">
+		<img src="logo_80.png">
+		<span>
+			下载爱抢购App,
+		{% if tipType == Type.BUY_FASTER %}
+			抢购快十倍
+		{% elif tipType == Type.MONEY_EVERY_DAY %}
+			天天有钱送
+		{% endif %}
+		</span>
+		<b>立即体验</b>
+	</a>
+</div>

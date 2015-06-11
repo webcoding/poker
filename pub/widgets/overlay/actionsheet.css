@@ -1,0 +1,47 @@
+.actionsheet-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.actionsheet-wrap .mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.actionsheet-wrap .content {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 110;
+}
+.actionsheet-wrap .group {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  background-color: #fff;
+}
+.actionsheet-wrap .group span {
+  display: block;
+  padding: 0 0.5rem;
+  color: #0096ff;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  text-align: center;
+}
+.actionsheet-wrap .group span.orange {
+  color: #ff9933;
+}
+.actionsheet-wrap .group .label {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+  line-height: 120%;
+}
+.actionsheet-wrap .group .bold {
+  font-weight: bold;
+}

@@ -1,0 +1,67 @@
+@import "../../../vars";
+
+.page-profile{
+	padding-top: 2rem;
+
+	.block{
+		margin-top: 1rem;
+		padding-left: 1rem;
+		background-color: @font-color-light;
+		font-size: @font-size-normal;
+	}
+
+	a{
+		display: block;
+	}
+
+	.title{
+		font-size: @font-size-big1;
+		padding: .8rem 0;
+		border-bottom: 1px solid @font-color-gray-light3;
+	}
+
+	.line{
+		padding: .8rem 1rem .8rem 0;
+		border-bottom: 1px solid @font-color-gray-light3;
+
+		&:last-of-type{
+			border-bottom: 0;
+		}
+
+		span{
+			float: right;
+			color: @font-color-gray-light;
+		}
+	}
+
+	.myprofile{
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		@avatar-size: 6rem;
+		.avatar{
+			float: left;
+			width: @avatar-size;
+			max-height: @avatar-size;
+			margin-right: 1rem;
+			border-radius: 50%;
+		}
+
+		.inner{
+		}
+
+		.mobile{
+			margin-top: .5rem;
+			font-size: @font-size-big1;
+		}
+
+		.balance{
+			margin-top: 1.5rem;
+			color: @font-color-gray-light;
+
+			span{
+				color: @font-color-orange;
+			}
+		}
+	}
+}

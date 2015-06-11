@@ -1,0 +1,36 @@
+.city-wrap {
+  padding-top: 2.6rem;
+  font-size: 1.5rem;
+  background-color: #ffffff;
+}
+.city-wrap h2 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 2.5rem;
+  font-weight: normal;
+  color: #000000;
+}
+.city-wrap h2 .city {
+  padding: 0 0.5rem;
+  color: #0096ff;
+}
+.city-wrap h2 .city-not-available {
+  color: #666666;
+}
+.city-wrap h3 {
+  padding-left: 2.5rem;
+}
+.city-wrap .cities li {
+  float: left;
+}
+.city-wrap .cities li .city {
+  display: block;
+  height: 4rem;
+  line-height: 4rem;
+  width: 6.5rem;
+  padding-left: 2.5rem;
+  color: #0096ff;
+}
+.city-wrap .re-pos {
+  color: #0096ff;
+}

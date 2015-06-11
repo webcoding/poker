@@ -1,0 +1,3 @@
+{% for city in city_list %}
+<li><a href="javascript:;" class="city" data-action="{{action}}" data-available="true" data-city='{{city | json_encode}}' data-id="{{city.id}}" data-name="{{city.name}}" data-baiduid="{{city.baidu_id}}">{{city.name}}</a></li>
+{% endfor %}

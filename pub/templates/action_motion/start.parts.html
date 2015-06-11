@@ -1,0 +1,86 @@
+{% macro banner(start_time, end_time) %}
+<div class="banner">
+	<img src="night_motion/banner.png" alt=""/>
+	<p class="time">每日活动时间：{{ start_time | formatTime('hh:mm') }}-{{ end_time | formatTime('hh:mm') }}</p>
+</div>
+{% endmacro %}
+
+{% macro box(canMotion) %}
+<div class="box">
+	{% if canMotion %}
+	<p class="tip">快来摇我拿奖品吧~</p>
+	{% else %}
+	<p class="tip">快来戳我拿奖品吧~</p>
+	{% endif %}
+	<img src="night_motion/box.png" alt=""/>
+</div>
+{% endmacro %}
+
+{% macro userlist(users) %}
+	{% if users | length %}
+	<div class="userlist">
+		<div class="inner">
+			<ul>
+			{% for user in users %}
+				<li>{{ user.mobile or user.user_name }}刚刚摇到{{ user.item_name }}</li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+	{% endif %}
+{% endmacro %}
+
+{% macro life(left, show_text) %}
+	<div class="life">
+		<p>
+			{% for i in range(0, 3) %}
+			<span class="star {% if loop.index0 < left %}star-alive {% endif %}">️</span>
+			{% endfor %}
+		</p>
+		{# 第一次正常进入时，不提示生命值文案 #}
+		{% if show_text %}
+			<p>
+				{% if left > 0 %}
+					今天还有{{ left }}次机会哦~不满意就重来吧!
+				{% else %}
+					您今天的摇奖机会已经用完啦~赶快收了这个奖品吧(n_n)
+				{% endif %}
+				<br>15分钟内领取有效哦
+			</p>
+		{% endif %}
+	</div>
+{% endmacro %}
+
+{% macro item(item, pool_id) %}
+	<div class="item clearfix" {% if pool_id %} data-is-locked-item="true" data-pool-id="{{ pool_id }}"{% endif %}>
+		<div class="inner">
+			<img src="{{ item.images[0] }}" alt=""/>
+			<div class="info">
+				<h3>{{ item.name }}</h3>
+				<p>
+					<span class="mkt-price">{{ item.market_price | formatPrice | rmb}}</span>
+					<span class="curr-price">{{ 0 | formatPrice | rmb }}</span>
+				</p>
+				<p class="branch">{{ item.branches[0].name }}</p>
+				<p class="addr">{{ item.branches[0].address }}</p>
+			</div>
+		</div>
+	</div>
+{% endmacro %}
+
+{% macro prize() %}
+
+{% endmacro %}
+
+{% macro avatar(type) %}
+    <div class="avatar
+    {% if type == 1 %}
+    avatar-laught
+    {% elif type == 2 %}
+    avatar-cry
+    {% elif type == 3 %}
+    avatar-blink
+    {% elif type == 4 %}
+    avatar-smile
+    {% endif %}"></div>
+{% endmacro %}

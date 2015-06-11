@@ -1,0 +1,131 @@
+@import "../../../vars";
+
+@page-top: 3.9rem;
+.common-reg{
+
+	.form-wrap{
+		background-color: @font-color-light;
+	}
+
+//	padding-top: @page-top;
+	&>div:first-child{
+		padding-top: @page-top;
+	}
+
+	.get-verify-code{
+		color: @font-color-blue-light;
+		font-size: @font-size-normal;
+	}
+
+	ul{
+		padding-left: 2rem;
+		border: 0.1rem solid #d6d6d6;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	li{
+		&.first{
+			border-top: 0;
+		}
+
+		&.rel{
+			position: relative;
+
+			span{
+				position: absolute;
+				right: 0rem;
+				top: 0rem;
+				padding: 0 2rem;
+				line-height: 3.9rem;
+			}
+		}
+
+		border-top: 0.1rem solid #d6d6d6;
+	}
+	input{
+		width: 100%;
+		font-size: @font-size-normal;
+		color: @font-color-gray;
+	}
+
+	p.tip{
+		padding: 1.5rem 1.8rem 1.5rem 0;
+
+		label, input{
+			float: right;
+		}
+		input{
+			margin-top: 0.2rem;
+			width: auto;
+			height: auto;
+		}
+		label{
+			padding-left: 0.2rem;
+			color: @font-color-gray;
+			font-size: @font-size-normal;
+
+			a{
+				padding-left: 0.2rem;
+				color: @font-color-blue-light;
+			}
+		}
+		.forgot-password{
+			float: right;
+			color: @font-color-blue-light;
+			font-size: @font-size-normal;
+		}
+	}
+
+	.submit{
+		display: block;
+		margin: 0 auto;
+		margin-top: 2rem;
+		width: 20rem;
+		padding: 1rem 0;
+		font-size: @font-size-big2;
+		color: @font-color-blue-light;
+		border: 0;
+		background: none;
+	}
+
+	.disabled{
+		color: @font-color-gray-light;
+	}
+
+	.third-login{
+		margin: 5rem 1rem 0;
+		padding: 0rem 0rem 5rem;
+		border-top: 1px solid @font-color-gray-light2;
+
+		@title-height: 2.5rem;
+		h2{
+			height: @title-height;
+			line-height: @title-height;
+			margin-top: -@title-height/2;
+			margin-bottom: 1rem;
+			font-size: @font-size-normal;
+			color: @font-color-gray-light;
+			text-align: center;
+
+			span{
+				padding: .5rem 1rem;
+				background-color: @font-color-light;
+			}
+		}
+
+		.buttons{
+			//display: -webkit-box;
+		}
+
+		.button{
+			display: block;
+			//-webkit-box-flex: 1;
+			text-align: center;
+		}
+
+		a, img{
+			display: inline-block;
+		}
+	}
+}

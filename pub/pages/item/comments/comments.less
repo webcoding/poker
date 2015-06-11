@@ -1,0 +1,44 @@
+@import "../../../vars";
+@import "../common/_star";
+
+@item-left: 1rem;
+@item-top: 1.5rem;
+@item-bottom: 1rem;
+.item-comments{
+
+	.items{
+		background-color: @font-color-light;
+	}
+
+	li{
+		margin-left: @item-left;
+		padding: @item-top @item-left @item-bottom 0;
+		border-bottom: 0.1rem solid #d6d6d6;
+	}
+
+	.star();
+
+	.mobile{
+		color: @font-color-dark;
+	}
+
+	.date{
+		//float: right;
+		color: @font-color-gray-light;
+	}
+
+	p{
+		padding-bottom: .2rem;
+		line-height: 150%;
+		font-size: @font-size-normal;
+		color: @font-color-gray;
+
+		&.buy{
+			color: @font-color-gray-light;
+		}
+	}
+
+	img{
+		height: 10rem;
+	}
+}

@@ -1,0 +1,15 @@
+{% macro style() %}
+	<%= mainModuleAndDepsStyle %>
+{% endmacro %}
+
+{% macro script(part) %}
+	{% if part == 'main' %}
+		<%= mainModule %>
+	{% elif part == 'deps' %}
+		<%= mainModuleDeps %>
+	{% endif %}
+{% endmacro %}
+
+{% macro title() %}
+清除所有缓存
+{% endmacro %}

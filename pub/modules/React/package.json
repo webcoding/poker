@@ -1,0 +1,17 @@
+{
+	"name": "ReactJS",
+	"version": "0.13.1",
+	"description": "",
+	"main": "React.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+	"imod": {
+	  "notTransform": [
+		"JSXTransformer.js",
+		"React.js"
+	  ]
+	}
+}

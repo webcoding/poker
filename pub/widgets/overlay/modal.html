@@ -1,0 +1,18 @@
+{% if needSection == 'wrap' %}
+<div class="modal-wrap">
+    <div class="mask"></div>
+    <div class="modal">
+        <div class="modal-inner">
+            <div class="top">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="buttons"></div>
+        </div>
+    </div>
+</div>
+{% elif needSection == 'buttons' %}
+    {% for button in buttons %}
+        <span class="button" data-index="{{loop.index0}}">{{button.text}}</span>
+    {% endfor %}
+{% endif %}

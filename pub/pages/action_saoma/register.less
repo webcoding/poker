@@ -1,0 +1,122 @@
+@import "../../vars";
+@import "../user/common/c-reg";
+@import "./_header";
+
+.page-action-sm-reg.common-reg{
+	height: 100%;
+
+	header{
+		.header();
+		.title{
+			width: 24rem;
+			height: 10.5rem;
+			.bg-img('action_saoma/top-txt.png');
+		}
+	}
+
+	@item-width: 90%;
+
+	.tip{
+		a{
+			color: @font-color-orange !important;
+		}
+	}
+
+	.form-wrap{
+		background: none;
+	}
+
+	ul{
+		padding-left: 0;
+		border: 0;
+	}
+	li{
+		padding-left: 1.5rem;
+		margin-top: 1.5rem;
+		border-top: 0;
+		background-color: @font-color-light;
+
+		&.first{
+			margin-top: 0;
+		}
+	}
+
+	// li 的 line-height 是 3.9rem
+	@li-height: 3.9rem;
+	@code-gap: .3rem;
+	.get-verify-code{
+		margin-right: 1rem;
+		margin-top: @code-gap;
+		line-height: @li-height - @code-gap * 2 !important;
+		color: @font-color-light;
+		background-color: @font-color-orange;
+	}
+
+	.disable{
+		background-color: @font-color-gray-light3;
+	}
+
+	p.tip{
+		width: @item-width;
+		margin: 0 auto;
+		padding: .8rem 0;
+	}
+
+	.btn{
+		display: block;
+		padding: 1rem 0;
+//		margin-top: 0;
+		width: @item-width;
+		margin: 0 auto;
+		color: @font-color-light;
+		background-color: @font-color-gray-light;
+		border-radius: .5rem;
+		font-size: @font-size-big1;
+		text-align: center;
+	}
+
+	.submit{
+		margin-bottom: 1rem;
+		background-color: @font-color-orange;
+	}
+
+	.disable{
+		color: @font-color-gray-light;
+	}
+
+	.log{
+		position: absolute;
+		bottom: 6rem;
+		right: 2rem;
+		font-size: @font-size-normal;
+
+		a{
+			color: @font-color-blue-light;
+		}
+	}
+
+	footer{
+		width: @item-width;
+		margin: 2rem auto 0;
+		line-height: 150%;
+		font-size: @font-size-normal;
+		color: @font-color-orange;
+	}
+}
+@media screen and (min-width: 470px) {
+	.page-action-sm-reg.common-reg{
+		header{
+			background-size: 100% 80%;
+		}
+	}
+}
+@media screen and (max-width: 375px) {
+	.page-action-sm-reg.common-reg{
+		header{
+			.title{
+				width: 19.5rem;
+				height: 8rem;
+			}
+		}
+	}
+}

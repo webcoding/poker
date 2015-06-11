@@ -1,0 +1,55 @@
+@import "../../vars";
+
+@download-height: 4.4rem;
+.download-tip{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: @font-color-light;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 30;
+
+	i{
+		width: 20px;
+		height: 22px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-style: normal;
+		font-size: 13px;
+		border-bottom-right-radius: 25px;
+		background: #555;
+		color: #eaeaea;
+	}
+
+	@download-padding-top-down: .5rem;
+	@img-height: 2.5rem;//@download-height - @download-padding-top-down * 2;
+	a{
+		display: block;
+		height: @img-height;
+		padding: @download-padding-top-down .5rem @download-padding-top-down 2rem;
+		font-size: @font-size-small3;//@font-size-normal;
+	}
+	img{
+		float: left;
+		height: @img-height;
+	}
+	span{
+		float: left;
+		padding-left: .5rem;
+//		height: @img-height;
+		line-height: @img-height;
+//		padding-top: 0.3rem;
+//		line-height: 120%;
+	}
+	b{
+		float: right;
+		padding: .3rem .8rem;
+		margin-top: .3rem;
+		color: @font-color-light;
+		//border: 1px solid @font-color-light;
+		border-radius: 2px;
+		background-color: @font-color-yellow;
+	}
+}

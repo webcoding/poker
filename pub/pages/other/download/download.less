@@ -1,0 +1,82 @@
+@import "../../../vars";
+
+.down-wrap{
+	font-size: @font-size-normal;
+	background-color: @font-color-light;
+
+	p{
+		padding: 8rem 2rem 8rem;
+		color: @font-color-gray-light;
+		line-height: 160%;
+	}
+
+	.buttons{
+		padding: 0 4rem 2rem;
+		color: @font-color-blue-light;
+//		background-color: @font-color-light;
+
+//		a{
+//			&:first-child{
+//				float: left;
+//			}
+//			&:nth-child(2){
+//				float: right;
+//			}
+//		}
+	}
+
+	.download-btn{
+		display: block;
+		line-height: 4rem;
+		text-align: center;
+		font-size: @font-size-big1;
+	}
+
+	.wechat-ios{
+		display: none;
+		position: absolute;
+		position: fixed;
+		top: @top-nav-height;
+		bottom: 0;
+		//margin: 0 1rem;
+		width: 100%;
+		//background-color: @font-color-light;
+		background-color: rgba(0,0,0,0.5);
+
+		.inner{
+			margin: 0 .5rem;
+			padding: .5rem;
+			border-bottom-right-radius: .2rem;
+			border-bottom-left-radius: .2rem;
+			background-color: @font-color-light;
+		}
+
+		li{
+			list-style: inherit;
+			margin-top: 1rem;
+		}
+
+		i{
+			display: inline-block;
+			text-indent: -999rem;
+			.bg-img('weixin/wx_tips.png');
+			background-repeat: no-repeat;
+			background-size: 3.05rem auto;
+			line-height: 30rem;
+			height: 1.4rem;
+			width: 2.4rem;
+			margin: 0 .5rem;
+			overflow: hidden;
+			vertical-align: middle;
+		}
+
+		.wxtips-top{
+			position: fixed;
+			top: .5rem;// + @top-nav-height;
+			right: 1.5rem;
+			width: 1.55rem;
+			height: 2.8rem;
+			background-position: 0 -8.8rem;
+		}
+	}
+}

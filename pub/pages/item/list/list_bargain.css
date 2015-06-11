@@ -1,0 +1,97 @@
+.items-wrap-bargain .action {
+  display: block;
+}
+.items-wrap-bargain .action img {
+  display: block;
+  width: 100%;
+}
+.items-wrap-bargain .curr-pos {
+  display: block;
+  font-size: 1.5rem;
+  color: #aaaaaa;
+  padding-left: 1rem;
+  line-height: 200%;
+  background-color: #eeeeee;
+}
+.items-wrap-bargain .empty {
+  padding-top: 2rem;
+  line-height: 3rem;
+  color: #aaaaaa;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.items-wrap-bargain .content-wrap {
+  background-color: #ffffff;
+}
+.items-wrap-bargain .items-content .item {
+  padding-left: 1rem;
+}
+.items-wrap-bargain .items-content .item-link {
+  display: block;
+  padding: 1.5rem 1rem 1.5rem 0;
+  border-bottom: 0.1rem solid #d6d6d6;
+}
+.items-wrap-bargain .items-content .item-img {
+  float: left;
+  width: 8rem;
+  height: 8rem;
+  margin-right: 0.5rem;
+}
+.items-wrap-bargain .items-content .item-inner {
+  position: relative;
+  min-height: 8rem;
+  line-height: 100%;
+  width: 100%;
+}
+.items-wrap-bargain .items-content .item-inner .info {
+  margin: 0rem 7.5rem 0 0;
+}
+.items-wrap-bargain .items-content .item-inner h2,
+.items-wrap-bargain .items-content .item-inner p {
+  display: block;
+  line-height: 120%;
+}
+.items-wrap-bargain .items-content .item-inner .like {
+  padding-top: .5rem;
+}
+.items-wrap-bargain .items-content h2 {
+  max-width: 100%;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #000000;
+}
+.items-wrap-bargain .items-content .like,
+.items-wrap-bargain .items-content .shop {
+  font-size: 1.4rem;
+  color: #aaaaaa;
+}
+.items-wrap-bargain .items-content .shop {
+  margin-top: 2.0rem;
+  margin-right: 1rem;
+  max-width: 100%;
+}
+.items-wrap-bargain .items-content .price {
+  position: absolute;
+  right: 0;
+  top: 0rem;
+  line-height: 140%;
+  text-align: right;
+}
+.items-wrap-bargain .items-content .market-price {
+  font-size: 1.2rem;
+  color: #666666;
+  text-decoration: line-through;
+}
+.items-wrap-bargain .items-content .curr-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6633;
+}
+.items-wrap-bargain .items-content .curr-price .over {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+.items-wrap-bargain .items-content .curr-price b {
+  font-size: 2.4rem;
+}

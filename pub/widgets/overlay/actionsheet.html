@@ -1,0 +1,13 @@
+<div class="actionsheet-wrap">
+    <div class="mask"></div>
+    <div class="content">
+    {% for btns in buttons %}
+    <div class="group">
+        {% set index0 = loop.index0 %}
+        {% for btn in btns %}
+        <span data-index0="{{index0}}" data-index1="{{loop.index0}}" class="item {{btn.color}} {{'label' if btn.label}} {{'bold' if btn.bold}}">{{btn.text}}</span>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+</div>

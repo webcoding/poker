@@ -1,0 +1,19 @@
+<div class="page-container page-log common-reg">
+    <div class="log-form form-wrap">
+        <form id="form-login" autocomplete="on" method="GET">
+            <ul>
+                <li class="first">
+                    <input type="number" name="mobile" required placeholder="请输入手机号"/>
+                </li>
+                <li>
+                    <input type="password" name="password" required placeholder="请输入密码（至少6位）"/>
+                </li>
+            </ul>
+            <p class="tip clearfix">
+                <a class="forgot-password" href="javascript:;" data-action='navUtil.location("{{ route.R.RESET_PASSWORD | getRoute(route) }}")'>忘记密码？</a>
+            </p>
+            <button class="submit" type="submit">确认登录</button>
+        </form>
+	    {% include "user/_third_login.html" %}
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{% macro notifi(notifications, className) %}
+	<ul class="{{className}}">
+		{% for notification in notifications %}
+		<li>
+			<h3>{{notification.title}}</h3>
+			<span>{{notification.time | formatTime }}</span>
+			<p>{{notification.content}}</p>
+		</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}
+
+<div class="page-container notifications">
+	<div class="content-wrap">
+	{% if data.system | length == 0 and data.user | length == 0 %}
+
+	<p class="empty">没有任何通知哦</p>
+
+	{% else %}
+
+	{{ notifi(data.system, "system") }}
+	{{ notifi(data.user, "users") }}
+
+	{% endif %}
+	</div>
+</div>

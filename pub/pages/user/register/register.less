@@ -1,0 +1,29 @@
+@import "../../../vars";
+@import "../common/c-reg";
+
+.invite-tip{
+	padding: 1rem 2rem;
+	color: @font-color-dark;
+	line-height: 140%;
+	font-size: @font-size-normal;
+}
+.page-reg{
+	height: 100%;
+	&.is-invite{
+		padding-top: 0;
+	}
+	.disable{
+		color: @font-color-gray-light;
+	}
+
+	.log{
+		position: absolute;
+		bottom: 6rem;
+		right: 2rem;
+		font-size: @font-size-normal;
+
+		a{
+			color: @font-color-blue-light;
+		}
+	}
+}

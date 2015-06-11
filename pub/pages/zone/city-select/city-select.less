@@ -1,0 +1,54 @@
+@import "../../../vars";
+
+@left: 2.5rem;
+.city-wrap{
+	padding-top: 2.6rem;
+	font-size: @font-size-normal;
+	background-color: @font-color-light;
+
+	h2{
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		padding-left: @left;
+//		text-align: center;
+		font-weight: normal;
+		color: @font-color-dark;
+
+		.city{
+			padding: 0 0.5rem;
+			color: @font-color-blue-light;
+		}
+
+		.city-not-available{
+			color: @font-color-gray;
+		}
+	}
+
+	h3{
+		padding-left: @left;
+	}
+
+	.cities{
+//		padding: 0 0rem 0 4.5rem;
+
+		li{
+			float: left;
+
+			.city{
+				display: block;
+//				padding-bottom: 2.5rem;
+				height: 4rem;
+				line-height: 4rem;
+//				width: 9rem;
+				width: 9rem - @left;
+				padding-left: @left;
+//				text-align: center;
+				color: @font-color-blue-light;
+			}
+		}
+	}
+
+	.re-pos{
+		color: @font-color-blue-light;
+	}
+}

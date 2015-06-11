@@ -1,0 +1,46 @@
+{
+	"name": "saoma",
+	"version": "1.0.0",
+	"description": "",
+	"main": "register.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"register.content.html",
+		"order_list.content.html",
+		"_top.html"
+	],
+	"pages": {
+		"register.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"register.conf.html": {
+			"mainModule": "pages/action_saoma/register"
+		},
+		"order_list.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"order_list.conf.html": {
+			"mainModule": "pages/action_saoma/order_list"
+		}
+	},
+
+	"pre_load": [
+		"register.conf.html",
+		"order_list.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"register.html",
+			"order_list.html"
+		]
+	}
+}

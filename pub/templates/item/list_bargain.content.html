@@ -1,0 +1,7 @@
+<div class="page-container items-wrap items-wrap-bargain">
+	<a class="curr-pos single-line" href="{{ route.R.ADDR_SELECT | getRoute(route) }}">位置：{{ currentPosition }}</a>
+	<!--<a class="action" href="{{ route.R.A_MOTION_START | getRoute(route) }}"><img src="night_motion/ad.jpg" alt="睡前摇"/></a>-->
+    <div class="content-wrap">
+	    {% include "item/list_bargain.items.html" %}
+    </div>
+</div>

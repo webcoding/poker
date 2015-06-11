@@ -1,0 +1,97 @@
+.page-address-wrap .block {
+  margin-top: 1rem;
+  line-height: 280%;
+}
+.page-address-wrap .block h3 {
+  margin-right: 1rem;
+}
+.page-address-wrap .block-single-line {
+  display: flex;
+  background-color: #ffffff;
+}
+.page-address-wrap .block-single-line h3 {
+  float: left;
+}
+.page-address-wrap .block-single-line.iconfont:before {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+.page-address-wrap .block-single-line input {
+  flex: 1;
+  margin: 0 1rem 0 0;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+.page-address-wrap .position-block {
+  padding: .5rem 1rem;
+  line-height: 160%;
+  background-color: #ffffff;
+}
+.page-address-wrap .position-block h3,
+.page-address-wrap .position-block p {
+  display: inline;
+  margin-left: 0;
+}
+.page-address-wrap h3 {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #666666;
+}
+.page-address-wrap .position,
+.page-address-wrap .use-addr-content {
+  font-size: 1.5rem;
+}
+.page-address-wrap .position .btn-fav,
+.page-address-wrap .use-addr-content .btn-fav {
+  color: #ff6633;
+}
+.page-address-wrap .use-addr-content {
+  color: #aaaaaa;
+}
+.page-address-wrap .cbd-point,
+.page-address-wrap .click-to-geo {
+  font-size: 1.5rem;
+  color: #0096ff;
+}
+.page-address-wrap .addrs {
+  display: table;
+  width: 100%;
+}
+.page-address-wrap .addrs .inner {
+  margin-left: 1rem;
+}
+.page-address-wrap .addrs .addr {
+  width: 33.33%;
+}
+.page-address-wrap .addrs .cbd-point {
+  display: block;
+  margin: 0 1rem 1rem 0;
+  line-height: 240%;
+  background-color: #ffffff;
+  text-align: center;
+}
+.page-address-wrap .list {
+  background-color: #ffffff;
+}
+.page-address-wrap .list li {
+  margin-left: 1rem;
+  line-height: 180%;
+  border-bottom: 0.1rem solid #eeeeee;
+}
+.page-address-wrap .list li:last-child {
+  border-bottom: 0;
+}
+.page-address-wrap .list a {
+  display: block;
+  margin-right: 1rem;
+  padding: .5rem 0;
+}
+.page-address-wrap .list-empty {
+  display: block;
+  padding-left: 1rem;
+  line-height: 280%;
+  color: #aaaaaa;
+  font-size: 1.5rem;
+}

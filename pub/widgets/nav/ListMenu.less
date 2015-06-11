@@ -1,0 +1,61 @@
+@import "../../vars";
+
+
+.top-nav-list-menu{
+	display: none;
+	width: 100%;
+	height: 100%;
+	color: @font-color-gray;
+	font-size: @font-size-normal;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 30;// 位于 navbar 和 page 之间的层级
+
+	ul{
+		margin-top: @top-nav-height + @top-tab-height;
+		background-color: @font-color-light;
+	}
+
+	.menu-item{
+		height: @top-list-menu-height;
+		line-height: @top-list-menu-height;
+
+		&.active{
+			color: @app-main-color;
+			background-color: @font-color-gray-light3;
+		}
+
+		a{
+			display: block;
+			padding: 0 1rem;
+		}
+	}
+}
+.top-nav-context-menu{
+	ul{
+		display: inline-block;
+		margin-top: @top-nav-height;
+
+		&.menu0{
+			margin-left: .5rem;
+		}
+
+		&.menu1{
+			margin-left: 3.5rem;
+		}
+
+		&.right{
+			float: right;
+
+			&.menu0{
+				margin-right: .5rem;
+			}
+
+			&.menu1{
+				margin-right: 3.5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "weixin-jssdk",
+	"version": "1.0.0",
+	"description": "",
+	"main": "wechat.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+	"imod":{
+		"notUseStrict":[
+			"jweixin.js"
+		]
+	}
+}

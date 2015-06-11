@@ -1,0 +1,77 @@
+{
+	"name": "other",
+	"version": "1.0.0",
+	"description": "",
+	"main": "contact.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"contact.content.html",
+		"download.content.html",
+		"notice.content.html"
+	],
+	"pages": {
+		"clear.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"clear.conf.html": {
+			"mainModule": "pages/other/clear/clear"
+		},
+		"contact.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"contact.conf.html": {
+			"mainModule": "pages/other/contact/contact"
+		},
+		"download.conf.html": {
+			"mainModule": "<%= main.mainModule %>"
+		},
+		"download.html": {
+			"mainModule": "pages/other/download/download"
+		},
+		"issue.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"issue.conf.html": {
+			"mainModule": "pages/other/issue/issue"
+		},
+		"notice.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"notice.conf.html": {
+			"mainModule": "pages/other/notice/notice"
+		},
+		"protocol.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"protocol.conf.html": {
+			"mainModule": "pages/other/protocol/protocol"
+		}
+	},
+
+	"pre_load": [
+		"contact.conf.html",
+		"download.conf.html",
+		"issue.conf.html",
+		"notice.conf.html",
+		"protocol.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"clear.html",
+			"contact.html",
+			"download.html",
+			"issue.html",
+			"notice.html",
+			"protocol.html"
+		]
+	}
+}

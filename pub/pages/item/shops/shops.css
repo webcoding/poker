@@ -1,0 +1,18 @@
+.item-shops .shops {
+  background-color: #ffffff;
+}
+.item-shops li {
+  margin-left: 1rem;
+  padding: 1.5rem 1rem 1rem 0;
+  border-bottom: 0.1rem solid #d6d6d6;
+}
+.item-shops h2 {
+  padding-bottom: 0.8rem;
+  font-size: 1.5rem;
+  color: #000000;
+}
+.item-shops p {
+  line-height: 150%;
+  font-size: 1.2rem;
+  color: #666666;
+}

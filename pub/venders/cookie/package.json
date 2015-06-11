@@ -1,0 +1,19 @@
+{
+  "name": "cookie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cookie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carhartl/jquery-cookie.git"
+  },
+  "author": "peichao <380692952@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carhartl/jquery-cookie/issues"
+  },
+  "homepage": "https://github.com/carhartl/jquery-cookie"
+}

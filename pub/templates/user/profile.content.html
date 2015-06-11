@@ -1,0 +1,66 @@
+<div class="page-container page-profile">
+	{#
+	<ul class="item-member-center">
+		{% if isLogin %}
+
+		<li class="user important"><a href="{{ route.R.DOWNLOAD | getRoute(route) }}"><span class="mobile">{{mobile}}</span><br><span class="balance"><b></b></span></a></li>
+		<li class="my-order"><a href="{{ route.R.ORDER_LIST | getRoute(route, 'type', route.ORDER_TYPE_REDEEM) }}">我的订单</a></li>
+		<li class="earn-coin important"><a href="{{ route.R.DOWNLOAD | getRoute(route, 'from', route.DOWNLOAD_FROM_COIN) }}">赚金币</a></li>
+
+		{% else %}
+
+		<li><a href="{{ route.R.REGISTER | getRoute(route) }}">注册/登录</a></li>
+
+		{% endif %}
+
+		<li class="notice-center"><a href="{{ route.R.NOTICE_CENTER | getRoute(route) }}">通知中心</a></li>
+		<li class="city-sel"><a href="{{ route.R.CITY_SELECT | getRoute(route) }}">选择城市[{{currCity}}]</a></li>
+		<li><a href="{{ route.R.CONTACT | getRoute(route) }}">联系我们</a></li>
+		<li><a href="{{ route.R.ISSUE | getRoute(route, 'url', route.STATIC_URL_FAQ) }}">常见问题</a></li>
+	</ul>
+	#}
+
+	{% if profile %}
+	<div class="myprofile block clearfix">
+		{% if profile.avatar %}
+		<img class="avatar" src="{{ profile.avatar }}" alt=""/>
+		{% endif %}
+		<div class="inner">
+			<p class="mobile">{{ profile.mobile }}</p>
+			<p class="balance">余额： <span class="balance-cnt">{{ profile.balance | formatPrice | rmb }}</span></p>
+		</div>
+	</div>
+
+	{% else %}
+
+	<div class="block">
+		<a class="line" href="{{ route.R.REGISTER | getRoute(route) }}">注册/登录</a>
+	</div>
+
+	{% endif %}
+
+	<div class="block">
+		<h3 class="title">订单</h3>
+		<div class="inner">
+			<a class="line" href="{{ route.R.ORDER_LIST | getRoute(route, 'type', route.ORDER_TYPE_REDEEM) }}">待领用</a>
+			<a class="line" href="{{ route.R.ORDER_LIST | getRoute(route, 'type', route.ORDER_TYPE_TO_COMMENT) }}">待评论</a>
+			<a class="line" href="{{ route.R.ORDER_LIST | getRoute(route, 'type', route.ORDER_TYPE_DONE) }}">已完成</a>
+		</div>
+	</div>
+
+	<div class="block">
+		<a class="line" href="{{ route.R.NOTICE_CENTER | getRoute(route) }}" class="notice-center">通知中心</a>
+		<a class="line" href="{{ route.R.CITY_SELECT | getRoute(route) }}" class="city-sel">选择城市 <span>{{currCity}}</span></a>
+	</div>
+
+	<div class="block">
+		<a class="line" href="{{ route.R.CONTACT | getRoute(route) }}">联系我们</a>
+		<a class="line" href="{{ route.R.ISSUE | getRoute(route, 'url', route.STATIC_URL_FAQ) }}">常见问题</a>
+	</div>
+
+	{% if profile %}
+	<div class="block">
+		<a class="line" href="{{ route.R.LOGOUT | getRoute(route) }}">退出登录</a>
+	</div>
+	{% endif %}
+</div>

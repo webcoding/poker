@@ -1,0 +1,17 @@
+.iqg-pagination {
+  font-size: 1.5rem;
+  background-color: #ffffff;
+}
+.iqg-pagination .prev,
+.iqg-pagination .next {
+  display: inline-block;
+  float: left;
+  padding: 1rem 0;
+  width: 50%;
+  line-height: 180%;
+  text-align: center;
+  color: #cccccc;
+}
+.iqg-pagination .active {
+  color: #ff6633;
+}

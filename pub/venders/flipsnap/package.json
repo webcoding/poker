@@ -1,0 +1,19 @@
+{
+	"name": "flipsnap",
+	"version": "0.6.2",
+	"description": "",
+	"main": "flipsnap.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/hokaccha/js-flipsnap/"
+	},
+	"author": "peichao",
+	"license": "ISC",
+	"bugs": {
+		"url": "http://github.com/hokaccha/js-flipsnap/issues"
+	},
+	"homepage": "http://github.com/hokaccha/js-flipsnap/"
+}

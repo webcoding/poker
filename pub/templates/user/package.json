@@ -1,0 +1,78 @@
+{
+	"name": "user",
+	"version": "1.0.0",
+	"description": "",
+	"main": "login.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"login.content.html",
+		"register.content.html",
+		"reset-password.content.html",
+		"profile.content.html",
+		"_third_login.html"
+	],
+	"pages": {
+		"login.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"login.conf.html": {
+			"mainModule": "pages/user/login/login"
+		},
+		"logout.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"logout.conf.html": {
+			"mainModule": "pages/user/logout/logout"
+		},
+		"register.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"register.conf.html": {
+			"mainModule": "pages/user/register/register"
+		},
+		"reset-password.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"reset-password.conf.html": {
+			"mainModule": "pages/user/reset-password/reset-password"
+		},
+		"login-check.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"login-check.conf.html": {
+			"mainModule": "pages/user/login-check/login-check"
+		},
+		"profile.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"profile.conf.html": {
+			"mainModule": "pages/user/profile/profile"
+		}
+	},
+
+	"pre_load": [
+		"login.conf.html",
+		"register.conf.html",
+		"reset-password.conf.html",
+		"profile.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"login.html",
+			"login-check.html",
+			"logout.html",
+			"register.html",
+			"reset-password.html",
+			"profile.html"
+		]
+	}
+}

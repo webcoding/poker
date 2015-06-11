@@ -1,0 +1,16 @@
+.contact-wrap ul {
+  padding: 2rem 1rem;
+  color: #000000;
+  background-color: #ffffff;
+}
+.contact-wrap li {
+  line-height: 200%;
+  font-size: 1.5rem;
+}
+.contact-wrap span,
+.contact-wrap a {
+  color: #0096ff;
+}
+.actionsheet-wrap .item a {
+  display: block;
+}

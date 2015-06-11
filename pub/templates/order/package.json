@@ -1,0 +1,55 @@
+{
+	"name": "order",
+	"version": "1.0.0",
+	"description": "",
+	"main": "order.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"detail.content.html",
+		"list.content.html",
+		"pay.content.html",
+		"_order_status.html"
+	],
+	"pages": {
+		"detail.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"detail.conf.html": {
+			"mainModule": "pages/order/detail/detail"
+		},
+		"pay.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"pay.conf.html": {
+			"mainModule": "pages/order/pay/pay"
+		},
+		"list.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"list.conf.html": {
+			"mainModule": "pages/order/list/list"
+		}
+	},
+
+	"pre_load": [
+		"detail.conf.html",
+		"pay.conf.html",
+		"list.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"detail.html",
+			"list.html",
+			"pay.html"
+		]
+	}
+}

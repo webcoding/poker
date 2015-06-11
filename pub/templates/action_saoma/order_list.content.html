@@ -1,0 +1,50 @@
+<div class="page-container page-action-sm-order">
+	<header>
+		<a class="down" href="{{ route.R.DOWNLOAD | getRoute(route) }}">爱抢购</a>
+		<span class="title"></span>
+		<p class="scan-tip">以下奖品已经发送到您的爱抢购账号里啦~</p>
+	</header>
+	<div class="orders">
+		{% if orders | length %}
+		{% for order in orders %}
+		<div class="order {% if loop.first %}first{% endif %}">
+			<a class="clearfix" href="{{ route.R.ORDER_DETAIL | getRoute(route, 'order_id', order.id) }}">
+				<img src="{{order.images[0]}}" class="img"/>
+				<div class="content">
+					<h3>{{ order.name }}</h3>
+					{% if order.start_date > server_time %}
+						<p class="code">验证码：下载爱抢购APP，记得明天来看哦~</p>
+						<p class="start">开始时间：{{ order.start_date | formatTime("MM-dd hh:mm") }}</p>
+					{% else %}
+						<p class="code">验证码：{{ order.redeem_number }}</p>
+					{% endif %}
+					{% if order.status == 2 or order.status == 3 %}
+						{# 状态：已支付 | 已过期 #}
+						<p class="expire">过期时间：{{ order.expire_date | formatTime("MM-dd hh:mm") }}</p>
+					{% elif order.status == 4 %}
+						{# 状态：已使用 #}
+						<p class="used">使用时间：{{ (order.redeem_time or order.expire_date) | formatTime("MM-dd hh:mm") }}</p>
+					{% endif %}
+					<p class="shop">{{ order.branches[0].name }}</p>
+				</div>
+			</a>
+		</div>
+		{% endfor %}
+		{% else %}
+		<div class="empty">这里没有属于你的订单...</div>
+		{% endif %}
+	</div>
+	<footer>
+		<div class="ad-txt">
+			<p class="">
+				爱抢购是一个价格你做主的APP <br/>
+				下载注册立得5元 <br/>
+				5元可抵百元用!
+			</p>
+		</div>
+		<p class="download clearfix">
+			<a class="ios" href="{{urlIPhoneDownload}}">iPhone 版下载</a>
+			<a class="android" href="{{urlAndroidDownload}}">Android 版下载</a>
+		</p>
+	</footer>
+</div>

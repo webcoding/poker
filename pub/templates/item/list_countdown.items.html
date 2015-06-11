@@ -1,0 +1,47 @@
+<div>
+{% if items | length > 0 %}
+<ul class="items items-countdown">
+{% for item in items %}
+	<li class="item" data-id="{{ item.id }}" data-index="{{ loop.index0 }}">
+		<a href="{{ route.R.ITEM_DETAIL | getRoute(route, 'item_id', item.id, 'type', route.ITEM_TYPE_COUNTDOWN) }}">
+			<div class="top">
+				<img src="{{ item.images[0] }}"/>
+				<span class="down-tip">
+					{% include "item/_downtip.html" %}
+				</span>
+				<span class="price-floor">底价{{ item.floor_price | formatPrice | rmb }}</span>
+			</div>
+			<div class="info clearfix">
+				<div class="left">
+					{#
+					<img class="logo" src="{{ item.branches[0].logo_small }}" alt=""/>
+					#}
+					<p class="name single-line">{{ item.name }}</p>
+					<p class="shop single-line">{{ item.brand }}</p>
+					<p class="addr single-line">{{ item.branches[0].address_short }}</p>
+				</div>
+				<div class="right">
+					<span class="price-start">{{ item.start_price | formatPrice | rmb }}</span>
+					<span class="real-time"></span>
+					{#
+					{% if isNotStart %}
+					<span class="price-floor">{{ item.floor_price | formatPrice | rmb }}</span>
+					{% endif %}
+					#}
+					<input class="range" type="range" max="1" min="0" value="0" step="0.001"/>
+					<p class="end">
+						<span class="end-time">{{ item.countdown_buy_end_time | formatTime('hh:mm') }}</span>
+						<span class="tip-end">结束</span>
+						{#<span class="tip-when">时</span>#}
+					</p>
+				</div>
+			</div>
+		</a>
+	</li>
+{% endfor %}
+</ul>
+{% else %}
+<p class="empty">您周边没有倒计时商品哦~</p>
+{% endif %}
+{{ paginationHTML }}
+</div>

@@ -1,0 +1,181 @@
+html {
+  width: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+}
+body.bg-gray {
+  background-color: #eeeeee;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+input,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+}
+input {
+  border: 0;
+  height: 3.9rem;
+  line-height: 3.9rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+#content {
+  position: relative;
+  z-index: 1;
+}
+#main {
+  box-sizing: border-box;
+  background-color: #eeeeee;
+}
+.page {
+  width: 100%;
+  z-index: 5;
+  overflow-x: hidden;
+}
+.page.page-present {
+  z-index: 15;
+}
+.page.page-prev-present {
+  z-index: 10;
+}
+.page.page-present-is-coming,
+.page.page-present-is-going {
+  z-index: 20;
+}
+.page > .page-container {
+  padding-top: 4.4rem;
+  padding-bottom: 4.4rem;
+}
+.page.page-no-nav > .page-container {
+  padding-top: 0;
+}
+.app-nav-has-subnavbar .page > .page-container {
+  padding-top: 7.92rem;
+}
+.mask {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.production-info {
+  position: fixed;
+  top: 15rem;
+  width: 100%;
+  line-height: 140%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #aaaaaa;
+  z-index: 0;
+}
+.h0 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #000000;
+}
+.h1-b-l {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.h1-b-d {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #000000;
+}
+.h1 {
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: #000000;
+}
+.h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #000000;
+}
+.h2-g {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #666666;
+}
+.bd-g {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #666666;
+}
+.bd-d {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #000000;
+}
+.price-s {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #ff6633;
+}
+.price-b {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #ff6633;
+}
+.btn-sml {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #0066cc;
+}
+.btn-nml {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #0066cc;
+}
+.btn-big {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #0066cc;
+}
+.btn-nml-attract {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #ff9933;
+}
+.single-line {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,43 @@
+<div class="page-container page-action-sm-reg page-reg common-reg">
+	<header>
+		<a class="down" href="{{ route.R.DOWNLOAD | getRoute(route) }}">爱抢购</a>
+		<span class="title"></span>
+		<p class="scan-tip">
+			扫码就送
+			{% for item in items %}
+			{% if loop.index0 != 0 %}、{% endif %}{{ item }}
+			{% endfor %}
+		</p>
+	</header>
+	<div class="reg-form form-wrap">
+		<form autocomplete="on" method="POST" id="form-register">
+			<ul>
+				<li class="first">
+					<input name="mobile" type="number" maxlength="11" required placeholder="请输入手机号"/>
+				</li>
+				<li class="rel">
+					<input name="auth_code" type="number" maxlength="6" required placeholder="请输入短信验证码"/>
+					<span class="get-verify-code">获取验证码<b></b></span>
+				</li>
+				<li>
+					<input name="password" type="password" required placeholder="请设置密码（至少6位）"/>
+				</li>
+			</ul>
+			<p class="tip clearfix">
+				<label for="user-protocol">我接受<a href="{{ route.R.USER_PROTOCOL | getRoute(route, 'url', route.STATIC_URL_AGREEMENT) }}">《爱抢购服务协议》</a></label>
+				<input name="protocol" id="user-protocol" type="checkbox" checked required/>
+			</p>
+			<button class="submit btn" type="submit">确认注册</button>
+			{#
+			<a class="btn" href="{{ route.R.A_SM_ORDER_LIST | getRoute(route, 'redirect', urlRedirect) }}">已领取过？马上查看</a>
+			#}
+			<a class="btn" href="{{ route.R.LOGIN | getRoute(route, 'redirect', urlRedirect) }}">已领取过？马上查看</a>
+		</form>
+		{% if rules %}
+		<footer>
+			<h2>活动规则</h2>
+			<div class="content">{{ rules | nl2br }}</div>
+		</footer>
+		{% endif %}
+	</div>
+</div>

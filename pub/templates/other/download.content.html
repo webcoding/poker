@@ -1,0 +1,35 @@
+<div class="page-container down-wrap">
+	<div class="wechat-ios">
+		<div class="inner">
+			<h3>请用浏览器打开：</h3>
+			<ol>
+				<li>点击右上角的<i style="background-position: 0 -5.6rem">...</i>或者<i style="background-position: 0 -7.2rem">分享</i></li>
+				<li>选择在 Safari 中打开<br>即可下载爱抢购客户端<i style="margin-top:-1.4rem; width: 3.05rem; height: 3.05rem;">Safari</i></li>
+			</ol>
+			<i class="wxtips-top">右上角</i>
+		</div>
+	</div>
+	<p class="tip">
+		{% if from == route.DOWNLOAD_FROM_PREFERENTIAL %}
+		亲爱的用户，“优惠点” 功能暂时只对 App 用户开放，“优惠点” 可以实现商品砍价功能。
+		{% elif from == route.DOWNLOAD_FROM_FAV %}
+		亲爱的用户，“收藏” 功能暂时只对 App 用户开放，点击 “收藏” 之后当前位置会出现在收藏地址列表里。
+		{% elif from == route.DOWNLOAD_FROM_COIN %}
+		亲爱的用户，“赚金币” 功能暂时只对 App 用户开放，赚到金币之后可以兑换余额。
+		{% else %}
+		亲爱的用户，下载爱抢购 App 之后可以享受到更强大的功能，比如“优惠点”，可以实现商品砍价功能。
+		{% endif %}
+	</p>
+	<div class="buttons clearfix">
+		{% if os.ios %}
+		<a class="download-btn" href="{{urlIPhoneDownload}}">立即下载</a>
+		{% elif os.android %}
+		<a class="download-btn" href="{{urlAndroidDownload}}">立即下载</a>
+		{% endif %}
+		{#
+		<a href="{{urlIPhoneDownload}}">iPhone 版下载</a>
+		<a href="{{urlAndroidDownload}}">Android 版下载</a>
+		#}
+	</div>
+	<iframe id="iframe-app" src="{{urlIFrame | trim}}" style="display:none"></iframe>
+</div>

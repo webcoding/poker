@@ -1,0 +1,15 @@
+{# 微信登录一整套还是太复杂了，暂时先注释，之后有时间了再弄 #}
+{# redirect 要编码两次，是因为微信 URL 的重定向参数（redirect_uri） 的参数中又包含了重定向参数（此处的：redirect） #}
+{#
+<div class="third-login">
+	<h2><span>其他账号登陆</span></h2>
+	<div class="buttons">
+		<div class="button">
+			<a class="wx-login"
+			   href="{{ route.THIRD_SITE.WECHAT_LOGIN | getRoute(route, 'redirect', redirect | encodeURIComponent | encodeURIComponent) }}">
+				<img src="weixin/icon48_appwx_logo.png"/>
+			</a>
+		</div>
+	</div>
+</div>
+#}

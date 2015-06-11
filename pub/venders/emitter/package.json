@@ -1,0 +1,23 @@
+{
+  "name": "emitter",
+  "version": "1.0.0",
+  "description": "event emitter",
+  "main": "emitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:peichao01/EventEmitter-js.git"
+  },
+  "keywords": [
+    "event",
+    "emitter"
+  ],
+  "author": "peichao <380692952@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peichao01/EventEmitter-js/issues"
+  },
+  "homepage": "https://github.com/peichao01/EventEmitter-js"
+}

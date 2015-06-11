@@ -1,0 +1,93 @@
+{
+	"name": "item",
+	"version": "1.0.0",
+	"description": "",
+	"main": "list_bargain.html.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "peichao <380692952@qq.com>",
+	"license": "ISC",
+
+
+	"comment": "之所以需要 none_pages 字段，就是怕 pages 字段漏写了，这样可以保证不会少写、漏写、误写",
+
+	"none_pages": [
+		"_stars.html",
+		"_downtip.html",
+		"comments.content.html",
+		"detail.content.html",
+		"detail.maininfo.html",
+		"list_bargain.content.html",
+		"list_countdown.content.html",
+		"list_bargain.items.html",
+		"list_countdown.items.html",
+		"shops.content.html"
+	],
+	"pages": {
+		"comments.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"comments.conf.html": {
+			"mainModule": "pages/item/comments/comments"
+		},
+		"description.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"description.conf.html": {
+			"mainModule": "pages/item/description/description"
+		},
+		"detail.conf.html": {
+			"mainModule": "<%= main.mainModule %>"
+		},
+		"detail.html": {
+			"mainModule": "pages/item/detail/detail"
+		},
+		"list_bargain.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"list_bargain.conf.html": {
+			"mainModule": "pages/item/list/list_bargain"
+		},
+		"list_countdown.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"list_countdown.conf.html": {
+			"mainModule": "pages/item/list/list_countdown"
+		},
+		"preferential.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"preferential.conf.html": {
+			"mainModule": "pages/item/preferential/preferential"
+		},
+		"shops.html": {
+			"mainModule": "<%= conf.mainModule %>"
+		},
+		"shops.conf.html": {
+			"mainModule": "pages/item/shops/shops"
+		}
+	},
+
+	"pre_load": [
+		"comments.conf.html",
+		"description.conf.html",
+		"detail.conf.html",
+		"list_bargain.conf.html",
+		"list_countdown.conf.html",
+		"preferential.conf.html",
+		"shops.conf.html"
+	],
+
+	"imod": {
+		"templateNotPrecompile": [
+			"comments.html",
+			"description.html",
+			"detail.html",
+			"list_bargain.html",
+			"list_countdown.html",
+			"preferential.html",
+			"shops.html"
+		]
+	}
+}

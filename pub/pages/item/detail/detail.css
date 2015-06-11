@@ -1,0 +1,282 @@
+.main-info {
+  margin: 0 0;
+  padding: 0.9rem 1rem;
+  background-color: #f7f7f7;
+}
+.main-info strong {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ff6633;
+}
+.main-info del {
+  padding-left: .5rem;
+  font-size: 1.2rem;
+  color: #666666;
+}
+.main-info h2 {
+  font-size: 2rem;
+  color: #000000;
+}
+.c-item-detail {
+  background-color: #eeeeee;
+}
+.c-item-detail .stars {
+  float: right;
+  color: #ff6633;
+}
+.c-item-detail .stars i {
+  margin-right: .02rem;
+  vertical-align: 0rem;
+}
+.c-item-detail .text-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
+.c-item-detail .text-icon.icon-star:after {
+  content: '★';
+}
+.c-item-detail .text-icon.icon-star-gray {
+  position: relative;
+}
+.c-item-detail .text-icon.icon-star-gray:after {
+  color: #cccccc;
+  content: '★';
+}
+.c-item-detail .text-icon.icon-star-partial {
+  position: absolute;
+  left: 0;
+  width: .55rem;
+  overflow: hidden;
+  color: #ff6633;
+}
+.c-item-detail .text-icon.icon-star-partial:after {
+  content: '★';
+}
+.c-item-detail .stars {
+  float: left;
+}
+.c-item-detail .star-less {
+  color: #aaaaaa;
+}
+.c-item-detail .btn-comment {
+  float: right;
+  color: #0096ff;
+}
+.c-item-detail .block {
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #eeeeee;
+  background-color: #ffffff;
+}
+.c-item-detail .block h3,
+.c-item-detail .block .block-content,
+.c-item-detail .block .btn-more {
+  display: block;
+  padding: 1rem 1rem;
+}
+.c-item-detail .block h3 {
+  border-bottom: 1px solid #eeeeee;
+}
+.c-item-detail .block .block-content {
+  line-height: 150%;
+  color: #666666;
+  font-size: 1.5rem;
+}
+.c-item-detail .block h3 {
+  padding-bottom: 1rem;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.c-item-detail .block .btn-more {
+  position: relative;
+  display: block;
+  color: #0096ff;
+  font-size: 1.5rem;
+  border-top: 1px solid #eeeeee;
+}
+.c-item-detail .block .btn-more a {
+  display: block;
+}
+.c-item-detail .block .btn-more:after {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: block;
+  content: '';
+  width: .8rem;
+  height: .8rem;
+  border-left: 0.2rem solid #0096ff;
+  border-bottom: 0.2rem solid #0096ff;
+  -webkit-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  -moz-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  -ms-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+}
+.c-item-detail .description {
+  padding-top: 0;
+}
+.c-item-detail .hint ul {
+  padding-bottom: 0.8rem;
+}
+.c-item-detail .hint li {
+  float: left;
+  width: 50%;
+}
+.c-item-detail .shop .tel span,
+.c-item-detail .shop .addr span {
+  color: #0096ff;
+}
+.item-detail-shop-tel {
+  display: block;
+}
+.item-detail-wrap.fix-main-info .imgs {
+  margin-bottom: 5.8rem;
+}
+.item-detail-wrap.fix-main-info .main-info-wrap {
+  position: fixed;
+  top: 4.4rem;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.item-detail-wrap .block {
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #eeeeee;
+  background-color: #ffffff;
+}
+.item-detail-wrap .block h3,
+.item-detail-wrap .block .block-content,
+.item-detail-wrap .block .btn-more {
+  display: block;
+  padding: 1rem 1rem;
+}
+.item-detail-wrap .block h3 {
+  border-bottom: 1px solid #eeeeee;
+}
+.item-detail-wrap .block .block-content {
+  line-height: 150%;
+  color: #666666;
+  font-size: 1.5rem;
+}
+.item-detail-wrap .block h3 {
+  padding-bottom: 1rem;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.item-detail-wrap .block .btn-more {
+  position: relative;
+  display: block;
+  color: #0096ff;
+  font-size: 1.5rem;
+  border-top: 1px solid #eeeeee;
+}
+.item-detail-wrap .block .btn-more a {
+  display: block;
+}
+.item-detail-wrap .block .btn-more:after {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: block;
+  content: '';
+  width: .8rem;
+  height: .8rem;
+  border-left: 0.2rem solid #0096ff;
+  border-bottom: 0.2rem solid #0096ff;
+  -webkit-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  -moz-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  -ms-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+}
+.item-detail-wrap img {
+  display: block;
+}
+.item-detail-wrap .img-countdown li {
+  width: 100%;
+}
+.item-detail-wrap .img-bargain li {
+  width: 50%;
+}
+.item-detail-wrap .imgs {
+  position: relative;
+  width: 100%;
+  height: 14rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.item-detail-wrap .imgs ul {
+  height: 100%;
+}
+.item-detail-wrap .imgs li {
+  float: left;
+  height: 100%;
+}
+.item-detail-wrap .imgs img {
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.item-detail-wrap .imgs p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+.item-detail-wrap .main-info {
+  margin: 0 0;
+  padding: 0.9rem 1rem;
+  background-color: #f7f7f7;
+}
+.item-detail-wrap .main-info strong {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #ff6633;
+}
+.item-detail-wrap .main-info del {
+  padding-left: .5rem;
+  font-size: 1.2rem;
+  color: #666666;
+}
+.item-detail-wrap .main-info h2 {
+  font-size: 2rem;
+  color: #000000;
+}
+.item-detail-wrap .main-info .btn-buy,
+.item-detail-wrap .main-info .btn-over {
+  float: right;
+  padding: 0.8rem 0.5rem;
+  width: 10rem;
+  border: 0;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 0.2rem;
+}
+.item-detail-wrap .main-info .btn-buy {
+  background-color: #ff9933;
+}
+.item-detail-wrap .main-info .btn-over {
+  background-color: #aaaaaa;
+  color: #ffffff;
+}
+.item-detail-wrap .main-info p,
+.item-detail-wrap .main-info h2 {
+  word-wrap: break-word;
+}
+.item-detail-wrap .main-info p {
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 10rem;
+}
+.item-detail-wrap .main-info h2 {
+  font-size: 1.8rem;
+}

@@ -1,0 +1,133 @@
+@import "../../../vars";
+@import "./_list";
+
+.items-wrap-bargain{
+
+	.action{
+		display: block;
+
+		img{
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.current-position();
+
+	.empty{
+		padding-top: 2rem;
+		line-height: 3rem;
+		color: @font-color-gray-light;
+		text-align: center;
+		font-size: @font-size-normal;
+	}
+
+	.content-wrap{
+		background-color: @font-color-light;
+	}
+
+	.items-content{
+
+		@item-size: 8rem;
+
+		.item{
+			padding-left: 1rem;
+		}
+
+		.item-link{
+			display: block;
+			padding: 1.5rem 1rem 1.5rem 0;
+			//padding-left: 1rem;
+			//padding-top: 1rem;
+			border-bottom: 0.1rem solid #d6d6d6;
+		}
+
+		.item-img{
+			float: left;
+			//position: absolute;
+			width: @item-size;
+			height: @item-size;
+			margin-right: 0.5rem;
+		}
+
+		.item-inner{
+			position: relative;
+			//float: left;
+			min-height: @item-size;
+			//padding: 0rem 0 1rem 0;
+			line-height: 100%;
+			width: 100%;
+
+			.info{
+				margin: 0rem 7.5rem 0 0;
+			}
+
+			h2,p{
+				display: block;
+				line-height: 120%;
+			}
+			h2{
+				//padding-bottom: .5rem;
+			}
+			.like{
+				padding-top: .5rem;
+				//padding-bottom: 1rem;
+			}
+		}
+
+		h2{
+			max-width: 100%;
+			//font-size: @font-size-normal;
+			font-size: @font-size-normal2;
+			font-weight: normal;
+			color: @font-color-dark;
+		}
+
+		.like,.shop{
+			//font-size: @font-size-small;
+			font-size: @font-size-small3;
+			color: @font-color-gray-light;
+		}
+
+		.shop{
+			margin-top: 2.0rem;
+			margin-right: 1rem;
+			max-width: 100%;
+
+			.name{
+				//margin-left: 7rem;
+			}
+		}
+
+		.price{
+			position: absolute;
+			//right: 1rem;
+			right: 0;
+			top: 0rem;
+			line-height: 140%;
+			text-align: right;
+		}
+
+		.market-price{
+			font-size: @font-size-small;
+			color: @font-color-gray;
+			text-decoration: line-through;
+		}
+
+		.curr-price{
+			font-size: @font-size-normal;
+			font-weight: bold;
+			color: @font-color-orange;
+
+			.over{
+				font-size: @font-size-normal;
+				font-weight: normal;
+				color: @font-color-gray-light;
+			}
+
+			b{
+				font-size: @font-size-big3;
+			}
+		}
+	}
+}

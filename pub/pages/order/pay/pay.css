@@ -1,0 +1,172 @@
+.order-pay-wrap .block {
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid #eeeeee;
+  background-color: #ffffff;
+}
+.order-pay-wrap .block h3,
+.order-pay-wrap .block .block-content,
+.order-pay-wrap .block .btn-more {
+  display: block;
+  padding: 1rem 1rem;
+}
+.order-pay-wrap .block h3 {
+  border-bottom: 1px solid #eeeeee;
+}
+.order-pay-wrap .block .block-content {
+  line-height: 150%;
+  color: #666666;
+  font-size: 1.5rem;
+}
+.order-pay-wrap .block h3 {
+  padding-bottom: 1rem;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.order-pay-wrap .block .btn-more {
+  position: relative;
+  display: block;
+  color: #0096ff;
+  font-size: 1.5rem;
+  border-top: 1px solid #eeeeee;
+}
+.order-pay-wrap .block .btn-more a {
+  display: block;
+}
+.order-pay-wrap .block .btn-more:after {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  display: block;
+  content: '';
+  width: .8rem;
+  height: .8rem;
+  border-left: 0.2rem solid #0096ff;
+  border-bottom: 0.2rem solid #0096ff;
+  -webkit-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  -moz-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  -ms-transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+  transform: translateY(-50%) scaleY(0.7) rotateZ(-135deg);
+}
+.order-pay-wrap .form {
+  padding-bottom: 1rem;
+  background-color: #ffffff;
+}
+.order-pay-wrap .summary {
+  line-height: 140%;
+}
+.order-pay-wrap .summary h3,
+.order-pay-wrap .summary .price,
+.order-pay-wrap .summary .shop {
+  margin-bottom: .5rem;
+}
+.order-pay-wrap .summary h3 {
+  font-size: 2rem;
+}
+.order-pay-wrap .summary .price {
+  font-size: 2rem;
+}
+.order-pay-wrap .summary .shop {
+  color: #aaaaaa;
+  font-size: 1.5rem;
+}
+.order-pay-wrap .summary.open em {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.order-pay-wrap .summary.open .detail {
+  display: block;
+}
+.order-pay-wrap .btn-detail {
+  float: right;
+  font-size: 1.5rem;
+  color: #0096ff;
+}
+.order-pay-wrap .btn-detail b {
+  font-weight: normal;
+}
+.order-pay-wrap .btn-detail em {
+  display: inline-block;
+  font-style: normal;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.order-pay-wrap .detail {
+  display: none;
+  line-height: 130%;
+  font-size: 1.2rem;
+  color: #aaaaaa;
+}
+.order-pay-wrap .detail .addr,
+.order-pay-wrap .detail h3,
+.order-pay-wrap .detail ul,
+.order-pay-wrap .detail .tips {
+  padding-top: 0.7rem;
+}
+.order-pay-wrap .detail h3 {
+  color: #000000;
+}
+.order-pay-wrap .detail li {
+  float: left;
+  width: 50%;
+}
+.order-pay-wrap .pay {
+  line-height: 4.8rem;
+  font-size: 1.5rem;
+  padding: 0 0 1rem 1rem;
+}
+.order-pay-wrap .pay .main {
+  padding-right: 1rem;
+  border-bottom: 0.1rem solid #d6d6d6;
+}
+.order-pay-wrap .pay .main input {
+  float: left;
+  height: 4.8rem;
+}
+.order-pay-wrap .pay .main label {
+  float: left;
+  padding-left: 0.5rem;
+}
+.order-pay-wrap .pay .main .money {
+  float: right;
+}
+.order-pay-wrap .pay .password {
+  display: none;
+  padding-right: 1rem;
+  border-bottom: 0.1rem solid #d6d6d6;
+}
+.order-pay-wrap .pay .password input {
+  width: 100%;
+}
+.order-pay-wrap .pay .link-forgot {
+  display: none;
+  border-bottom: 0.1rem solid #d6d6d6;
+}
+.order-pay-wrap .pay .link-forgot a {
+  float: right;
+  padding: 0 1rem;
+  color: #0096ff;
+}
+.order-pay-wrap .btn-submit {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0;
+  width: 20rem;
+  height: 4rem;
+  border: 0;
+  background: none;
+  color: #0096ff;
+  font-size: 2rem;
+}
+.order-pay-wrap .time-tip {
+  text-align: center;
+  font-size: 2rem;
+  color: #aaaaaa;
+  padding-top: 2rem;
+}

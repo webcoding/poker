@@ -1,0 +1,159 @@
+@import "../../vars";
+
+@gap-border: 0.5rem;
+@nav-bg-color: @app-main-color;
+
+#app-nav{
+	display: none;
+	height: @top-nav-height;
+	font-weight: normal;
+	color: @font-color-light;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 45;
+
+	&.have-tab{
+		height: @top-nav-height + @top-tab-height;
+	}
+
+	.wrap{
+	}
+
+	.nav-item{
+		display: none;
+
+		&.show{
+			display: block;
+		}
+	}
+
+	a{
+		-webkit-tap-highlight-color: rgba(255,255,255,0);
+	}
+
+	.inner{
+		display: inline-block;
+	}
+
+	.btn-left, .btn-right{
+		height: @top-nav-height;
+		font-size: @app-nav-side-font-size;
+	}
+	.btn-left{
+		text-align: left;
+	}
+	.btn-right{
+		text-align: right;
+	}
+
+
+	.btn-left.show{
+		padding-left: .5rem;
+		padding-right: 1rem;
+	}
+	.btn-right.show{
+		padding-right: .5rem;
+		padding-left: 1rem;
+	}
+
+	.title{
+		text-align: center;
+		font-weight: normal;
+		font-size: @font-size-big1;
+		-webkit-box-flex: 1;
+		width: 100%;
+
+		.inner{
+			max-width: 80%;
+		}
+	}
+
+	.nav-item-arrow:after{
+		content: "";
+		width: 0;
+		height: 0;
+		display: inline-block;
+		border-top: .7rem solid @font-color-light;
+		border-left: .45rem solid transparent;
+		border-right: .45rem solid transparent;
+		border-bottom: 0;
+		margin-left: .3rem;
+	}
+}
+
+.app-nav-main{
+	display: -webkit-box;
+	height: @top-nav-height;
+	line-height: @top-nav-height;
+	background-color: @nav-bg-color;
+
+	@tabs-border-height: 0.1rem;
+	.tabs{
+		background-color: @nav-bg-color;
+	}
+
+	@tab-border-height: 0.3rem;
+	.tab{
+		float: left;
+		color: rgba(255, 255, 255, 0.7);
+
+		height: @top-nav-height - @tab-border-height;
+		line-height: @top-nav-height - @tab-border-height;
+		border-bottom: @tab-border-height solid @nav-bg-color;
+
+		&.active{
+			font-weight: bold;
+			color: @font-color-light;
+
+			border-bottom-color: @font-color-light;
+		}
+
+		a{
+			display: inline-block;
+			padding: 0 .8rem;
+		}
+	}
+}
+
+.app-nav-tab-container {
+	@tabs-border-height: 0.1rem;
+	@tabs-bg-color: @font-color-light;
+	.tabs {
+		background-color: @tabs-bg-color;
+		color: @font-color-gray-light;
+		font-size: @font-size-normal;
+		border-bottom: .1rem solid @font-color-gray-light2;
+
+		display: -webkit-box;
+		display: box;
+	}
+
+	@tab-border-height: 0.3rem;
+	.tab {
+		height: @top-tab-height - @tab-border-height;
+		line-height: @top-tab-height - @tab-border-height;
+		border-bottom: @tab-border-height solid @tabs-bg-color;
+
+		display: block;
+		-webkit-box-flex: 1;
+		-mz-box-flex: 1;
+		-ms-box-flex: 1;
+		box-flex: 1;
+		text-align: center;
+
+		&.active {
+			font-weight: bold;
+			color: @nav-bg-color;
+
+			border-bottom-color: @nav-bg-color;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 0 .8rem;
+	}
+}

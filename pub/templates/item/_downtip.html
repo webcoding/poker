@@ -1,0 +1,9 @@
+{% if serverNowSec < item.countdown_start_time %}
+	{{ item.countdown_start_time | formatTime('hh:mm') }}开始降价
+{% elif serverNowSec < item.countdown_end_time %}
+	降价中
+{% elif serverNowSec < item.countdown_buy_end_time %}
+	到底价啦
+{% else %}
+	已结束
+{% endif %}

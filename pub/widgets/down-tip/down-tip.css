@@ -1,0 +1,44 @@
+.download-tip {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+}
+.download-tip i {
+  width: 20px;
+  height: 22px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-style: normal;
+  font-size: 13px;
+  border-bottom-right-radius: 25px;
+  background: #555;
+  color: #eaeaea;
+}
+.download-tip a {
+  display: block;
+  height: 2.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  font-size: 1.4rem;
+}
+.download-tip img {
+  float: left;
+  height: 2.5rem;
+}
+.download-tip span {
+  float: left;
+  padding-left: .5rem;
+  line-height: 2.5rem;
+}
+.download-tip b {
+  float: right;
+  padding: .3rem .8rem;
+  margin-top: .3rem;
+  color: #ffffff;
+  border-radius: 2px;
+  background-color: #ff9933;
+}
